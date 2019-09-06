@@ -236,6 +236,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
             disabled={disabled}
             onShowUnderlay={() => this.setState({ textButtonSelected: text })}
             onHideUnderlay={() => this.setState({ textButtonSelected: "" })}
+            testID={`PinCodeNr_${text}`}
             onPress={() => {
               this.onPressButtonNumber(text);
             }}>
