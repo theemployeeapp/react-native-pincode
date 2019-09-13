@@ -99,7 +99,7 @@ class PinCode extends React.PureComponent {
                     : colors_1.colors.turquoise, disabled: disabled, onShowUnderlay: () => this.setState({ textButtonSelected: text }), onHideUnderlay: () => this.setState({ textButtonSelected: "" }), onPress: () => {
                     this.onPressButtonNumber(text);
                 } },
-                React.createElement(react_native_1.Text, { style: [
+                React.createElement(react_native_1.Text, { testID: `PinCodeNr_${text}`, style: [
                         this.props.styleTextButton
                             ? this.props.styleTextButton
                             : styles.text,
@@ -323,7 +323,7 @@ class PinCode extends React.PureComponent {
     }
     render() {
         const { password, showError, attemptFailed, changeScreen } = this.state;
-        return (React.createElement(react_native_1.View, { style: this.props.styleContainer
+        return (React.createElement(react_native_1.View, { testID: this.props.testID || 'PinCode', style: this.props.styleContainer
                 ? this.props.styleContainer
                 : styles.container },
             React.createElement(Animate_1.default, { show: true, start: {

@@ -80,7 +80,8 @@ export type IProps = {
   titleComponent?: any
   titleConfirmFailed?: string
   titleValidationFailed?: string
-  validationRegex?: RegExp
+  validationRegex?: RegExp,
+  testID?: string
 }
 
 export type IState = {
@@ -240,6 +241,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
               this.onPressButtonNumber(text);
             }}>
             <Text
+              testID={`PinCodeNr_${text}`}
               style={[
                 this.props.styleTextButton
                   ? this.props.styleTextButton
@@ -551,6 +553,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
     const { password, showError, attemptFailed, changeScreen } = this.state;
     return (
       <View
+        testID={this.props.testID || 'PinCode'}
         style={
           this.props.styleContainer
             ? this.props.styleContainer

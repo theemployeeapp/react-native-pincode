@@ -119,6 +119,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
         }>
         {this.state.status === PinStatus.choose && (
           <PinCode
+            testID={'PinCodeChoose'}
             buttonDeleteComponent={this.props.buttonDeleteComponent || null}
             buttonDeleteText={this.props.buttonDeleteText}
             buttonNumberComponent={this.props.buttonNumberComponent || null}
@@ -184,6 +185,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
         )}
         {this.state.status === PinStatus.confirm && (
           <PinCode
+            testID={'PinCodeChoose'}
             buttonDeleteComponent={this.props.buttonDeleteComponent || null}
             buttonDeleteText={this.props.buttonDeleteText}
             buttonNumberComponent={this.props.buttonNumberComponent || null}
