@@ -14,6 +14,14 @@ const pinAttemptsAsyncStorageNameDefault = "pinAttemptsRNPin";
 const pinCodeKeychainNameDefault = "reactNativePinCode";
 const touchIDDisabledDefault = false;
 const touchIDTitleDefault = 'Authentication Required';
+
+if (!async_storage_1) {
+  const async_storage_1 = {
+    getItem: () => {},
+    multiRemove: () => {},
+    setItem: () => {}
+  }
+}
 class PINCode extends React.PureComponent {
     constructor(props) {
         super(props);

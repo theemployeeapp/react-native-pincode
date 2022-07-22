@@ -17,7 +17,13 @@ import TouchID from 'react-native-touch-id'
 /**
  * Pin Code Enter PIN Page
  */
-
+ if (!AsyncStorage) {
+  const AsyncStorage = {
+    getItem: () => {},
+    multiRemove: () => {},
+    setItem: () => {}
+  }
+}
 export interface IProps {
   alphabetCharsVisible?: boolean
   buttonDeleteComponent: any

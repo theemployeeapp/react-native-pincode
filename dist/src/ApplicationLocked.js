@@ -10,6 +10,14 @@ const React = require("react");
 const Animate_1 = require("react-move/Animate");
 const react_native_1 = require("react-native");
 const MaterialIcons_1 = require("react-native-vector-icons/MaterialIcons");
+
+if (!async_storage_1) {
+  const async_storage_1 = {
+    getItem: () => {},
+    multiRemove: () => {},
+    setItem: () => {}
+  }
+}
 class ApplicationLocked extends React.PureComponent {
     constructor(props) {
         super(props);

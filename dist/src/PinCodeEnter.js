@@ -8,6 +8,14 @@ const React = require("react");
 const react_native_1 = require("react-native");
 const Keychain = require("react-native-keychain");
 const react_native_touch_id_1 = require("react-native-touch-id");
+
+if (!async_storage_1) {
+  const async_storage_1 = {
+    getItem: () => {},
+    multiRemove: () => {},
+    setItem: () => {}
+  }
+}
 class PinCodeEnter extends React.PureComponent {
     constructor(props) {
         super(props);
