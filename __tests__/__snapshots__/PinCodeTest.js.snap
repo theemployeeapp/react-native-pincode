@@ -3,18 +3,21 @@
 exports[`ApplicatinLocked renders correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#ffffff",
-      "flex": 1,
-      "flexBasis": 0,
-      "height": "100%",
-      "justifyContent": "center",
-      "left": 0,
-      "position": "absolute",
-      "top": 0,
-      "width": "100%",
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 1,
+        "flexBasis": 0,
+        "height": "100%",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      },
+      null,
+    ]
   }
 >
   <View>
@@ -28,6 +31,7 @@ exports[`ApplicatinLocked renders correctly 1`] = `
             "paddingLeft": 48,
             "paddingRight": 48,
           },
+          null,
           Object {
             "opacity": 0,
           },
@@ -39,29 +43,35 @@ exports[`ApplicatinLocked renders correctly 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#445878",
-            "fontSize": 20,
-            "fontWeight": "200",
-            "marginBottom": 64,
-            "opacity": 0.6,
-          }
+          Array [
+            Object {
+              "color": "#445878",
+              "fontSize": 20,
+              "fontWeight": "200",
+              "marginBottom": 64,
+              "opacity": 0.6,
+            },
+            null,
+          ]
         }
       >
         Maximum attempts reached
       </Text>
       <View
         style={
-          Object {
-            "borderColor": "rgb(230, 231, 233)",
-            "borderRadius": 4,
-            "borderWidth": 2,
-            "marginBottom": 64,
-            "paddingBottom": 10,
-            "paddingLeft": 30,
-            "paddingRight": 30,
-            "paddingTop": 10,
-          }
+          Array [
+            Object {
+              "borderColor": "rgb(230, 231, 233)",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "marginBottom": 64,
+              "paddingBottom": 10,
+              "paddingLeft": 30,
+              "paddingRight": 30,
+              "paddingTop": 10,
+            },
+            null,
+          ]
         }
       >
         <Text
@@ -69,11 +79,14 @@ exports[`ApplicatinLocked renders correctly 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "color": "#445878",
-              "fontFamily": "Courier",
-              "fontSize": 20,
-            }
+            Array [
+              Object {
+                "color": "#445878",
+                "fontFamily": "Courier",
+                "fontSize": 20,
+              },
+              null,
+            ]
           }
         >
           00:00
@@ -81,17 +94,20 @@ exports[`ApplicatinLocked renders correctly 1`] = `
       </View>
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FC4349",
-            "borderRadius": 32,
-            "height": 64,
-            "justifyContent": "center",
-            "marginBottom": 64,
-            "opacity": 0.6,
-            "overflow": "hidden",
-            "width": 64,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FC4349",
+              "borderRadius": 32,
+              "height": 64,
+              "justifyContent": "center",
+              "marginBottom": 64,
+              "opacity": 0.6,
+              "overflow": "hidden",
+              "width": 64,
+            },
+            null,
+          ]
         }
       >
         <Text
@@ -110,6 +126,7 @@ exports[`ApplicatinLocked renders correctly 1`] = `
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
+              Object {},
             ]
           }
         >
@@ -121,12 +138,15 @@ exports[`ApplicatinLocked renders correctly 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#445878",
-            "fontSize": 16,
-            "lineHeight": 24,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#445878",
+              "fontSize": 16,
+              "lineHeight": 24,
+              "textAlign": "center",
+            },
+            null,
+          ]
         }
       >
         To protect your information, access has been locked for NaN minutes.
@@ -136,12 +156,15 @@ exports[`ApplicatinLocked renders correctly 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#445878",
-            "fontSize": 16,
-            "lineHeight": 24,
-            "textAlign": "center",
-          }
+          Array [
+            Object {
+              "color": "#445878",
+              "fontSize": 16,
+              "lineHeight": 24,
+              "textAlign": "center",
+            },
+            null,
+          ]
         }
       >
         Come back later and try again.
@@ -157,12 +180,15 @@ exports[`ApplicatinLocked renders correctly 1`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-            "marginTop": 32,
-            "opacity": 0.6,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginTop": 32,
+              "opacity": 0.6,
+            },
+            null,
+          ]
         }
       >
         <View
@@ -191,11 +217,14 @@ exports[`ApplicatinLocked renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#ffffff",
-                "fontSize": 14,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 14,
+                  "fontWeight": "bold",
+                },
+                null,
+              ]
             }
           />
         </View>
@@ -208,11 +237,15 @@ exports[`ApplicatinLocked renders correctly 1`] = `
 exports[`PinCode renders correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "width": "100%",
+      },
+      null,
+    ]
   }
 >
   <View
@@ -220,10 +253,11 @@ exports[`PinCode renders correctly 1`] = `
       Array [
         Object {
           "alignItems": "center",
+          "flex": 2,
           "flexDirection": "column",
-          "justifyContent": "center",
-          "minHeight": 64,
+          "justifyContent": "flex-end",
         },
+        null,
         Object {
           "opacity": 0,
         },
@@ -241,6 +275,7 @@ exports[`PinCode renders correctly 1`] = `
             "fontWeight": "200",
             "lineHeight": 40,
           },
+          null,
           Object {
             "color": "#9dafc8",
             "opacity": 1,
@@ -259,6 +294,7 @@ exports[`PinCode renders correctly 1`] = `
             "fontWeight": "200",
             "textAlign": "center",
           },
+          null,
           Object {
             "color": "#9dafc8",
             "opacity": 1,
@@ -267,25 +303,36 @@ exports[`PinCode renders correctly 1`] = `
       }
     />
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 2,
+        "justifyContent": "center",
+      }
+    }
+  >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "height": "auto",
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": "auto",
+            "justifyContent": "center",
+          },
+          null,
+        ]
       }
     />
   </View>
   <View
     style={
       Object {
-        "flex": 1,
+        "flex": 7,
         "flexDirection": "column",
-        "maxHeight": 352,
-        "maxWidth": 260,
+        "justifyContent": "flex-start",
+        "width": "100%",
       }
     }
   >
@@ -295,9 +342,8 @@ exports[`PinCode renders correctly 1`] = `
           "alignItems": "center",
           "flex": 0,
           "flexDirection": "row",
+          "flexShrink": 1,
           "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
         }
       }
     >
@@ -307,11 +353,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="1"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -321,35 +371,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            1
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              1
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -358,11 +419,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="2"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -372,35 +437,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            2
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              2
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -409,11 +485,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="3"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -423,35 +503,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            3
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              3
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -461,9 +552,8 @@ exports[`PinCode renders correctly 1`] = `
           "alignItems": "center",
           "flex": 0,
           "flexDirection": "row",
+          "flexShrink": 1,
           "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
         }
       }
     >
@@ -473,11 +563,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="4"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -487,35 +581,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            4
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              4
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -524,11 +629,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="5"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -538,35 +647,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            5
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              5
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -575,11 +695,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="6"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -589,35 +713,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            6
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              6
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -627,9 +762,8 @@ exports[`PinCode renders correctly 1`] = `
           "alignItems": "center",
           "flex": 0,
           "flexDirection": "row",
+          "flexShrink": 1,
           "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
         }
       }
     >
@@ -639,11 +773,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="7"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -653,35 +791,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            7
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              7
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -690,11 +839,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="8"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -704,35 +857,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            8
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              8
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -741,11 +905,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="9"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -755,35 +923,46 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            9
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              9
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -793,9 +972,9 @@ exports[`PinCode renders correctly 1`] = `
           "alignItems": "center",
           "flex": 0,
           "flexDirection": "row",
+          "flexShrink": 0,
           "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
+          "justifyContent": "flex-end",
         }
       }
     >
@@ -805,6 +984,8 @@ exports[`PinCode renders correctly 1`] = `
             "flex": 0,
             "flexDirection": "column",
             "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
             "width": 64,
           }
         }
@@ -815,11 +996,15 @@ exports[`PinCode renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "column",
-            "width": "auto",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="0"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -829,46 +1014,63 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(242, 245, 251)",
+                "borderRadius": 32,
+                "height": 64,
+                "justifyContent": "center",
+                "width": 64,
+              },
+              Object {
+                "backgroundColor": "rgb(242, 245, 251)",
+              },
+              null,
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
+          <View
+            style={null}
           >
-            0
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontSize": 32,
+                    "fontWeight": "200",
+                  },
+                  null,
+                  Object {
+                    "color": "#9dafc8",
+                    "opacity": 1,
+                  },
+                ]
+              }
+            >
+              0
+            </Text>
+          </View>
         </View>
       </View>
       <View
         style={
           Object {
-            "flex": 1,
+            "alignItems": "center",
+            "flex": 0,
             "flexDirection": "column",
+            "height": 64,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "width": 64,
           }
         }
       >
         <View
+          accessibilityLabel="delete"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -877,20 +1079,20 @@ exports[`PinCode renders correctly 1`] = `
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "column",
-              "height": 64,
-              "justifyContent": "center",
-              "marginLeft": 8,
-              "marginRight": 8,
-              "width": 64,
-            }
-          }
+          style={null}
         >
           <View
-            style={null}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "flexDirection": "column",
+                  "justifyContent": "center",
+                },
+                null,
+              ]
+            }
           >
             <Text
               accessible={true}
@@ -910,6 +1112,7 @@ exports[`PinCode renders correctly 1`] = `
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
+                  Object {},
                 ]
               }
             >
@@ -925,6 +1128,7 @@ exports[`PinCode renders correctly 1`] = `
                     "fontWeight": "200",
                     "marginTop": 5,
                   },
+                  null,
                   Object {
                     "color": "rgb(211, 213, 218)",
                     "opacity": 0.5,
@@ -945,20 +1149,27 @@ exports[`PinCode renders correctly 1`] = `
 exports[`PinCodeChoose renders correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <View
-    style={
+    Array [
       Object {
         "alignItems": "center",
         "flex": 1,
         "justifyContent": "center",
-      }
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        null,
+      ]
     }
   >
     <View
@@ -966,10 +1177,11 @@ exports[`PinCodeChoose renders correctly 1`] = `
         Array [
           Object {
             "alignItems": "center",
+            "flex": 2,
             "flexDirection": "column",
-            "justifyContent": "center",
-            "minHeight": 64,
+            "justifyContent": "flex-end",
           },
+          null,
           Object {
             "opacity": 0,
           },
@@ -987,6 +1199,7 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "fontWeight": "200",
               "lineHeight": 40,
             },
+            null,
             Object {
               "color": "#9dafc8",
               "opacity": 1,
@@ -1005,6 +1218,7 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "fontWeight": "200",
               "textAlign": "center",
             },
+            null,
             Object {
               "color": "#9dafc8",
               "opacity": 1,
@@ -1013,90 +1227,141 @@ exports[`PinCodeChoose renders correctly 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 2,
+          "justifyContent": "center",
+        }
+      }
+    >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "height": "auto",
-            "justifyContent": "center",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "auto",
+              "justifyContent": "center",
+            },
+            null,
+          ]
         }
       >
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
       </View>
     </View>
     <View
       style={
         Object {
-          "flex": 1,
+          "flex": 7,
           "flexDirection": "column",
-          "maxHeight": 352,
-          "maxWidth": 260,
+          "justifyContent": "flex-start",
+          "width": "100%",
         }
       }
     >
@@ -1106,9 +1371,8 @@ exports[`PinCodeChoose renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -1118,11 +1382,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="1"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1132,35 +1400,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              1
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                1
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1169,11 +1448,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="2"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1183,35 +1466,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              2
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                2
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1220,11 +1514,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="3"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1234,35 +1532,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              3
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                3
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1272,9 +1581,8 @@ exports[`PinCodeChoose renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -1284,11 +1592,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="4"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1298,35 +1610,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              4
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                4
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1335,11 +1658,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="5"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1349,35 +1676,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              5
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                5
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1386,11 +1724,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="6"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1400,35 +1742,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              6
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                6
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1438,9 +1791,8 @@ exports[`PinCodeChoose renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -1450,11 +1802,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="7"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1464,35 +1820,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              7
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                7
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1501,11 +1868,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="8"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1515,35 +1886,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              8
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                8
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1552,11 +1934,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="9"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1566,35 +1952,46 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              9
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                9
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -1604,9 +2001,9 @@ exports[`PinCodeChoose renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 0,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
+            "justifyContent": "flex-end",
           }
         }
       >
@@ -1616,6 +2013,8 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "flex": 0,
               "flexDirection": "column",
               "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
               "width": 64,
             }
           }
@@ -1626,11 +2025,15 @@ exports[`PinCodeChoose renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="0"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1640,46 +2043,63 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              0
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                0
+              </Text>
+            </View>
           </View>
         </View>
         <View
           style={
             Object {
-              "flex": 1,
+              "alignItems": "center",
+              "flex": 0,
               "flexDirection": "column",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="delete"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1688,20 +2108,20 @@ exports[`PinCodeChoose renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "column",
-                "height": 64,
-                "justifyContent": "center",
-                "marginLeft": 8,
-                "marginRight": 8,
-                "width": 64,
-              }
-            }
+            style={null}
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "alignSelf": "center",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                  },
+                  null,
+                ]
+              }
             >
               <Text
                 accessible={true}
@@ -1721,6 +2141,7 @@ exports[`PinCodeChoose renders correctly 1`] = `
                       "fontStyle": "normal",
                       "fontWeight": "normal",
                     },
+                    Object {},
                   ]
                 }
               >
@@ -1736,6 +2157,7 @@ exports[`PinCodeChoose renders correctly 1`] = `
                       "fontWeight": "200",
                       "marginTop": 5,
                     },
+                    null,
                     Object {
                       "color": "rgb(211, 213, 218)",
                       "opacity": 0.5,
@@ -1757,20 +2179,27 @@ exports[`PinCodeChoose renders correctly 1`] = `
 exports[`PinCodeEnter renders correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <View
-    style={
+    Array [
       Object {
         "alignItems": "center",
         "flex": 1,
         "justifyContent": "center",
-      }
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        null,
+      ]
     }
   >
     <View
@@ -1778,10 +2207,11 @@ exports[`PinCodeEnter renders correctly 1`] = `
         Array [
           Object {
             "alignItems": "center",
+            "flex": 2,
             "flexDirection": "column",
-            "justifyContent": "center",
-            "minHeight": 64,
+            "justifyContent": "flex-end",
           },
+          null,
           Object {
             "opacity": 0,
           },
@@ -1799,6 +2229,7 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "fontWeight": "200",
               "lineHeight": 40,
             },
+            null,
             Object {
               "color": "#9dafc8",
               "opacity": 1,
@@ -1817,6 +2248,7 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "fontWeight": "200",
               "textAlign": "center",
             },
+            null,
             Object {
               "color": "#9dafc8",
               "opacity": 1,
@@ -1825,90 +2257,141 @@ exports[`PinCodeEnter renders correctly 1`] = `
         }
       />
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 2,
+          "justifyContent": "center",
+        }
+      }
+    >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "height": "auto",
-            "justifyContent": "center",
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "auto",
+              "justifyContent": "center",
+            },
+            null,
+          ]
         }
       >
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
         <View
           style={
             Object {
-              "backgroundColor": "#7BCDD0",
-              "borderRadius": 2,
-              "height": 4,
-              "left": 0,
-              "marginBottom": 32,
-              "marginLeft": 10,
-              "marginRight": 10,
-              "marginTop": 64,
-              "opacity": 0.5,
-              "width": 4,
+              "alignItems": "center",
+              "justifyContent": "center",
             }
           }
-        />
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#7BCDD0",
+                  "borderRadius": 2,
+                  "height": 4,
+                  "left": 0,
+                  "marginLeft": 10,
+                  "marginRight": 10,
+                  "opacity": 0.5,
+                  "width": 4,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
       </View>
     </View>
     <View
       style={
         Object {
-          "flex": 1,
+          "flex": 7,
           "flexDirection": "column",
-          "maxHeight": 352,
-          "maxWidth": 260,
+          "justifyContent": "flex-start",
+          "width": "100%",
         }
       }
     >
@@ -1918,9 +2401,8 @@ exports[`PinCodeEnter renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -1930,11 +2412,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="1"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1944,35 +2430,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              1
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                1
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -1981,11 +2478,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="2"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -1995,35 +2496,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              2
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                2
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -2032,11 +2544,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="3"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2046,35 +2562,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              3
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                3
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -2084,9 +2611,8 @@ exports[`PinCodeEnter renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -2096,11 +2622,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="4"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2110,35 +2640,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              4
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                4
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -2147,11 +2688,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="5"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2161,35 +2706,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              5
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                5
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -2198,11 +2754,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="6"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2212,35 +2772,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              6
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                6
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -2250,9 +2821,8 @@ exports[`PinCodeEnter renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 1,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
           }
         }
       >
@@ -2262,11 +2832,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="7"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2276,35 +2850,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              7
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                7
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -2313,11 +2898,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="8"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2327,35 +2916,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              8
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                8
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -2364,11 +2964,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="9"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2378,35 +2982,46 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              9
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                9
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -2416,9 +3031,9 @@ exports[`PinCodeEnter renders correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
+            "flexShrink": 0,
             "height": 88,
-            "justifyContent": "center",
-            "width": "100%",
+            "justifyContent": "flex-end",
           }
         }
       >
@@ -2428,6 +3043,8 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "flex": 0,
               "flexDirection": "column",
               "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
               "width": 64,
             }
           }
@@ -2438,11 +3055,15 @@ exports[`PinCodeEnter renders correctly 1`] = `
               "alignItems": "center",
               "flex": 0,
               "flexDirection": "column",
-              "width": "auto",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="0"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2452,46 +3073,63 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgb(242, 245, 251)",
-                "borderRadius": 32,
-                "height": 64,
-                "justifyContent": "center",
-                "width": 64,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(242, 245, 251)",
+                  "borderRadius": 32,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                },
+                Object {
+                  "backgroundColor": "rgb(242, 245, 251)",
+                },
+                null,
+              ]
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontSize": 32,
-                    "fontWeight": "200",
-                  },
-                  Object {
-                    "color": "#9dafc8",
-                    "opacity": 1,
-                  },
-                ]
-              }
+            <View
+              style={null}
             >
-              0
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 32,
+                      "fontWeight": "200",
+                    },
+                    null,
+                    Object {
+                      "color": "#9dafc8",
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                0
+              </Text>
+            </View>
           </View>
         </View>
         <View
           style={
             Object {
-              "flex": 1,
+              "alignItems": "center",
+              "flex": 0,
               "flexDirection": "column",
+              "height": 64,
+              "marginLeft": 8,
+              "marginRight": 8,
+              "width": 64,
             }
           }
         >
           <View
+            accessibilityLabel="delete"
             accessible={true}
             isTVSelectable={true}
             onResponderGrant={[Function]}
@@ -2500,20 +3138,20 @@ exports[`PinCodeEnter renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "column",
-                "height": 64,
-                "justifyContent": "center",
-                "marginLeft": 8,
-                "marginRight": 8,
-                "width": 64,
-              }
-            }
+            style={null}
           >
             <View
-              style={null}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "alignSelf": "center",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                  },
+                  null,
+                ]
+              }
             >
               <Text
                 accessible={true}
@@ -2533,6 +3171,7 @@ exports[`PinCodeEnter renders correctly 1`] = `
                       "fontStyle": "normal",
                       "fontWeight": "normal",
                     },
+                    Object {},
                   ]
                 }
               >
@@ -2548,6 +3187,7 @@ exports[`PinCodeEnter renders correctly 1`] = `
                       "fontWeight": "200",
                       "marginTop": 5,
                     },
+                    null,
                     Object {
                       "color": "rgb(211, 213, 218)",
                       "opacity": 0.5,
@@ -2558,743 +3198,6 @@ exports[`PinCodeEnter renders correctly 1`] = `
                 delete
               </Text>
             </View>
-          </View>
-        </View>
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "column",
-          "justifyContent": "center",
-          "minHeight": 64,
-        },
-        Object {
-          "opacity": 0,
-        },
-      ]
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "fontSize": 20,
-            "fontWeight": "200",
-            "lineHeight": 40,
-          },
-          Object {
-            "color": "#9dafc8",
-            "opacity": 1,
-          },
-        ]
-      }
-    />
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "fontSize": 16,
-            "fontWeight": "200",
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#9dafc8",
-            "opacity": 1,
-          },
-        ]
-      }
-    />
-  </View>
-  <View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "height": "auto",
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "flexDirection": "column",
-        "maxHeight": 352,
-        "maxWidth": 260,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 0,
-          "flexDirection": "row",
-          "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            1
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            2
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            3
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 0,
-          "flexDirection": "row",
-          "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            4
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            5
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            6
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 0,
-          "flexDirection": "row",
-          "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            7
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            8
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            9
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 0,
-          "flexDirection": "row",
-          "height": 88,
-          "justifyContent": "center",
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 0,
-            "flexDirection": "column",
-            "height": 64,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0,
-            "flexDirection": "column",
-            "width": "auto",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgb(242, 245, 251)",
-              "borderRadius": 32,
-              "height": 64,
-              "justifyContent": "center",
-              "width": 64,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "fontSize": 32,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#9dafc8",
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            0
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "flexDirection": "column",
-          }
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "column",
-              "height": 64,
-              "justifyContent": "center",
-              "marginLeft": 8,
-              "marginRight": 8,
-              "width": 64,
-            }
-          }
-        >
-          <View
-            style={null}
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={false}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "color": "rgb(211, 213, 218)",
-                    "fontSize": 30,
-                  },
-                  Object {
-                    "opacity": 0.5,
-                  },
-                  Object {
-                    "fontFamily": "Material Icons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                ]
-              }
-            >
-              
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Array [
-                  Object {
-                    "fontWeight": "200",
-                    "marginTop": 5,
-                  },
-                  Object {
-                    "color": "rgb(211, 213, 218)",
-                    "opacity": 0.5,
-                  },
-                ]
-              }
-            >
-              delete
-            </Text>
           </View>
         </View>
       </View>

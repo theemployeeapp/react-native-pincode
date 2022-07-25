@@ -3,13 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_native_1 = require("react-native");
 const async_storage_1 = require("@react-native-async-storage/async-storage");
 const Keychain = require("react-native-keychain");
-if (!async_storage_1.default) {
-    const AsyncStorage = {
-        getItem: () => { },
-        multiRemove: () => { },
-        setItem: () => { }
-    };
-}
 var PinResultStatus;
 (function (PinResultStatus) {
     PinResultStatus["initial"] = "initial";
@@ -26,7 +19,7 @@ exports.deletePinCode = async (serviceName) => {
     return await Keychain.resetInternetCredentials(serviceName);
 };
 exports.resetInternalStates = async (asyncStorageKeys) => {
-    return await async_storage_1.default.multiRemove(asyncStorageKeys);
+    return await async_storage_1.multiRemove(asyncStorageKeys);
 };
 exports.noBiometricsConfig = react_native_1.Platform.select({
     android: {
