@@ -8,14 +8,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import * as React from "react";
 import { View, StyleSheet, StyleProp, ViewStyle, TextStyle } from "react-native";
 
-if (!AsyncStorage) {
-  const AsyncStorage = {
-    getItem: () => {},
-    multiRemove: () => {},
-    setItem: () => {}
-  }
-}
-
 export type IProps = {
   alphabetCharsVisible?: boolean
   bottomLeftComponent?: any

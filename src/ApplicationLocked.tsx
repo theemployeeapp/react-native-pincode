@@ -16,13 +16,6 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-if (!AsyncStorage) {
-  const AsyncStorage = {
-    getItem: () => {},
-    multiRemove: () => {}
-  }
-}
-
 export type IProps = {
   buttonComponent?: any
   changeStatus: (status: PinResultStatus) => void

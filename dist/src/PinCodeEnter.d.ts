@@ -2,6 +2,9 @@ import { PinStatus } from './PinCode';
 import { PinResultStatus } from './utils';
 import * as React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+/**
+ * Pin Code Enter PIN Page
+ */
 export interface IProps {
     alphabetCharsVisible?: boolean;
     buttonDeleteComponent: any;

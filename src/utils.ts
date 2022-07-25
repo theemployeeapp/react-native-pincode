@@ -2,13 +2,6 @@ import { Platform } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import * as Keychain from 'react-native-keychain'
 
-if (!AsyncStorage) {
-  const AsyncStorage = {
-    getItem: () => {},
-    multiRemove: () => {},
-    setItem: () => {}
-  }
-}
 
 export enum PinResultStatus {
   initial = 'initial',
