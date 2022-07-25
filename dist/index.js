@@ -8,20 +8,19 @@ const utils_1 = require("./src/utils");
 const async_storage_1 = require("@react-native-async-storage/async-storage");
 const React = require("react");
 const react_native_1 = require("react-native");
+if (!async_storage_1.default) {
+    const AsyncStorage = {
+        getItem: () => { },
+        multiRemove: () => { },
+        setItem: () => { }
+    };
+}
 const disableLockScreenDefault = false;
 const timePinLockedAsyncStorageNameDefault = "timePinLockedRNPin";
 const pinAttemptsAsyncStorageNameDefault = "pinAttemptsRNPin";
 const pinCodeKeychainNameDefault = "reactNativePinCode";
 const touchIDDisabledDefault = false;
 const touchIDTitleDefault = 'Authentication Required';
-
-if (!async_storage_1) {
-  const async_storage_1 = {
-    getItem: () => {},
-    multiRemove: () => {},
-    setItem: () => {}
-  }
-}
 class PINCode extends React.PureComponent {
     constructor(props) {
         super(props);
