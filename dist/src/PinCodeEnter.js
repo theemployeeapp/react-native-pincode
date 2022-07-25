@@ -27,12 +27,12 @@ class PinCodeEnter extends React.PureComponent {
                 }
                 this.setState({ pinCodeStatus: utils_1.PinResultStatus.initial });
                 this.props.changeInternalStatus(utils_1.PinResultStatus.initial);
-                const pinAttemptsStr = await async_storage_1.getItem(this.props.pinAttemptsAsyncStorageName);
+                const pinAttemptsStr = await async_storage_1.default.getItem(this.props.pinAttemptsAsyncStorageName);
                 let pinAttempts = pinAttemptsStr ? +pinAttemptsStr : 0;
                 const pin = this.props.storedPin || this.keyChainResult;
                 if (pinValidOverride !== undefined ? pinValidOverride : pin === pinCode) {
                     this.setState({ pinCodeStatus: utils_1.PinResultStatus.success });
-                    async_storage_1.multiRemove([
+                    async_storage_1.default.multiRemove([
                         this.props.pinAttemptsAsyncStorageName,
                         this.props.timePinLockedAsyncStorageName
                     ]);
@@ -44,12 +44,12 @@ class PinCodeEnter extends React.PureComponent {
                     pinAttempts++;
                     if (+pinAttempts >= this.props.maxAttempts &&
                         !this.props.disableLockScreen) {
-                        await async_storage_1.setItem(this.props.timePinLockedAsyncStorageName, new Date().toISOString());
+                        await async_storage_1.default.setItem(this.props.timePinLockedAsyncStorageName, new Date().toISOString());
                         this.setState({ locked: true, pinCodeStatus: utils_1.PinResultStatus.locked });
                         this.props.changeInternalStatus(utils_1.PinResultStatus.locked);
                     }
                     else {
-                        await async_storage_1.setItem(this.props.pinAttemptsAsyncStorageName, pinAttempts.toString());
+                        await async_storage_1.default.setItem(this.props.pinAttemptsAsyncStorageName, pinAttempts.toString());
                         this.setState({ pinCodeStatus: utils_1.PinResultStatus.failure });
                         this.props.changeInternalStatus(utils_1.PinResultStatus.failure);
                     }

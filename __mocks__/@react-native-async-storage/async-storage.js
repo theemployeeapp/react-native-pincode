@@ -1,1 +1,9 @@
-export default from '@react-native-async-storage/async-storage/jest/async-storage-mock'
+const mock = {
+  default: {
+    getItem: () => {},
+    multiRemove: () => {},
+    setItem: () => {}
+  }
+}
+export default mock
+async_storage_1.default.getItem

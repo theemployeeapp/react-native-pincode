@@ -103,7 +103,7 @@ class ApplicationLocked extends React.PureComponent {
         this.renderTitle = this.renderTitle.bind(this);
     }
     componentDidMount() {
-        async_storage_1.getItem(this.props.timePinLockedAsyncStorageName).then(val => {
+        async_storage_1.default.getItem(this.props.timePinLockedAsyncStorageName).then(val => {
             this.timeLocked = new Date(val ? val : "").getTime() + this.props.timeToLock;
             this.timer();
         });
@@ -114,7 +114,7 @@ class ApplicationLocked extends React.PureComponent {
         await delay_1.default(1000);
         if (timeDiff < 1000) {
             this.props.changeStatus(utils_1.PinResultStatus.initial);
-            async_storage_1.multiRemove([
+            async_storage_1.default.multiRemove([
                 this.props.timePinLockedAsyncStorageName,
                 this.props.pinAttemptsAsyncStorageName
             ]);

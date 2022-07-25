@@ -1,6 +1,12 @@
 import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 
-jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
+jest.mock('@react-native-async-storage/async-storage', () => ({
+  default: {
+    getItem: jest.fn(() => Promise.resolve({ data: {} })),
+    multiRemove: jest.fn(() => Promise.resolve({ data: {} })),
+    setItem: jest.fn(() => Promise.resolve({ data: {} }))
+  }
+}))
 
 jest.mock('react-native-keychain', () => ({
   setGenericPassword: jest.fn(),
