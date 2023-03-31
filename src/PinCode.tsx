@@ -267,6 +267,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
         }}>
         {({ opacity }: any) => (
           <TouchableHighlight
+            key={text}
             style={[
               styles.buttonCircle,
               { backgroundColor: this.props.colorCircleButtons },
