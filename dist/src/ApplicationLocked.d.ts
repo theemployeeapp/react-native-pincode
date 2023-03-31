@@ -1,6 +1,6 @@
 import { PinResultStatus } from "./utils";
 import * as React from "react";
-export declare type IProps = {
+export type IProps = {
     buttonComponent?: any;
     changeStatus: (status: PinResultStatus) => void;
     colorIcon?: string;
@@ -29,7 +29,7 @@ export declare type IProps = {
     timerComponent?: any;
     titleComponent?: any;
 };
-export declare type IState = {
+export type IState = {
     timeDiff: number;
 };
 declare class ApplicationLocked extends React.PureComponent<IProps, IState> {

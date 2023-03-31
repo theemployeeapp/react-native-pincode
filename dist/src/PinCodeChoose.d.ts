@@ -67,7 +67,7 @@ export interface IProps {
     vibrationEnabled?: boolean;
     delayBetweenAttempts?: number;
 }
-export declare type IState = {
+export type IState = {
     status: PinStatus;
     pinCode: string;
 };

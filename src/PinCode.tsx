@@ -37,7 +37,7 @@ export interface IProps {
   customBackSpaceIcon?: Function
   emptyColumnComponent: any
   endProcess: (pinCode: string, isErrorValidation?: boolean) => void
-  launchTouchID?: () => void 
+  launchTouchID?: () => void
   getCurrentLength?: (length: number) => void
   iconButtonDeleteDisabled?: boolean
   numbersButtonOverlayColor: string
@@ -232,6 +232,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
         default:
           break;
       }
+      this.setState({ password: '' });
     }
   };
 
@@ -247,7 +248,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
       ["8", "TUV"],
       ["9", "WXYZ"],
       ["0", " "]
-  ]); 
+  ]);
     const disabled =
       (this.state.password.length === this.props.passwordLength ||
         this.state.showError) &&
@@ -729,7 +730,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
                 styles.colEmpty,
                 this.props.styleEmptyColumn
               ]}>
-              {this.props.emptyColumnComponent 
+              {this.props.emptyColumnComponent
                 ? this.props.emptyColumnComponent(this.props.launchTouchID)
                 : null
               }

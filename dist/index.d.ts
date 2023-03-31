@@ -1,7 +1,7 @@
 import { PinResultStatus } from "./src/utils";
 import * as React from "react";
 import { StyleProp, ViewStyle, TextStyle } from "react-native";
-export declare type IProps = {
+export type IProps = {
     alphabetCharsVisible?: boolean;
     bottomLeftComponent?: any;
     buttonComponentLockedPage?: any;
@@ -109,7 +109,7 @@ export declare type IProps = {
     vibrationEnabled?: boolean;
     delayBetweenAttempts?: number;
 };
-export declare type IState = {
+export type IState = {
     internalPinStatus: PinResultStatus;
     pinLocked: boolean;
 };
@@ -122,5 +122,5 @@ declare class PINCode extends React.PureComponent<IProps, IState> {
 }
 export declare function hasUserSetPinCode(serviceName?: string): Promise<boolean>;
 export declare function deleteUserPinCode(serviceName?: string): Promise<void>;
-export declare function resetPinCodeInternalStates(pinAttempsStorageName?: string, timePinLockedStorageName?: string): Promise<any>;
+export declare function resetPinCodeInternalStates(pinAttempsStorageName?: string, timePinLockedStorageName?: string): Promise<void>;
 export default PINCode;
