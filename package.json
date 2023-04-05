@@ -47,7 +47,7 @@
     "lodash": "^4.17.21",
     "react-move": "^6.5.0",
     "react-native-easy-grid": "^0.2.2",
-    "react-native-keychain": "6.2.0",
+    "react-native-keychain": "git+ssh://git@github.com/theemployeeapp/react-native-keychain.git#warmupremove",
     "react-native-touch-id": "git+ssh://git@github.com/theemployeeapp/react-native-touch-id#test",
     "react-native-vector-icons": "^9.2.0"
   }

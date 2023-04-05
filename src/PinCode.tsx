@@ -255,6 +255,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
       !this.state.attemptFailed;
     return (
       <Animate
+        key={text}
         show={true}
         start={{
           opacity: 1
@@ -284,6 +285,7 @@ class PinCode extends React.PureComponent<IProps, IState> {
             accessibilityLabel={text}>
             <View>
             <Text
+              key={text}
               style={[
                 styles.text,
                 this.props.styleTextButton,

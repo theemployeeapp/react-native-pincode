@@ -91,7 +91,7 @@ class PinCode extends React.PureComponent {
             const disabled = (this.state.password.length === this.props.passwordLength ||
                 this.state.showError) &&
                 !this.state.attemptFailed;
-            return (React.createElement(Animate_1.default, { show: true, start: {
+            return (React.createElement(Animate_1.default, { key: text, show: true, start: {
                     opacity: 1
                 }, update: {
                     opacity: [
@@ -106,7 +106,7 @@ class PinCode extends React.PureComponent {
                     this.onPressButtonNumber(text);
                 }, accessible: true, accessibilityLabel: text },
                 React.createElement(react_native_1.View, null,
-                    React.createElement(react_native_1.Text, { style: [
+                    React.createElement(react_native_1.Text, { key: text, style: [
                             styles.text,
                             this.props.styleTextButton,
                             {
