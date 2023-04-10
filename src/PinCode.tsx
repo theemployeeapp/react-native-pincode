@@ -113,8 +113,8 @@ function PinCode (props: IProps) {
   const [colorDelete, setColorDelete] = useState(null)
   const [attemptFailed, setAttemptFailed] = useState(false)
   const [changeScreen, setChangeScreen] = useState(false)
-  const [circleSizeEmpty, setCircleSizeEmpty] = useState(this.props.styleCircleSizeEmpty || 4)
-  const [circleSizeFull, setCircleSizeFull] = useState(this.props.styleCircleSizeFull || (this.props.pinCodeVisible ? 6 : 8))
+  const [circleSizeEmpty, setCircleSizeEmpty] = useState(props.styleCircleSizeEmpty || 4)
+  const [circleSizeFull, setCircleSizeFull] = useState(props.styleCircleSizeFull || (props.pinCodeVisible ? 6 : 8))
 
   function usePrevious(value) {
     const ref = useRef();
@@ -125,25 +125,25 @@ function PinCode (props: IProps) {
   }
 
   useEffect(() => {
-    if (this.props.getCurrentLength) this.props.getCurrentLength(0);
+    if (props.getCurrentLength) props.getCurrentLength(0);
   }, [])
 
   useEffect(() => {
-    const prevStatus = usePrevious(this.props.pinCodeStatus);
+    const prevStatus = usePrevious(props.pinCodeStatus);
 
     if (
       prevStatus !== "failure" &&
-      this.props.pinCodeStatus === "failure"
+      props.pinCodeStatus === "failure"
     ) {
       failedAttempt();
     }
     if (
       prevStatus !== "locked" &&
-      this.props.pinCodeStatus === "locked"
+      props.pinCodeStatus === "locked"
     ) {
       setPassword("");
     }
-  }, [this.props.pinCodeStatus])
+  }, [props.pinCodeStatus])
 
   const failedAttempt = async () => {
     await delay(300);
@@ -151,7 +151,7 @@ function PinCode (props: IProps) {
     setAttemptFailed(true);
     setChangeScreen(false);
     doShake();
-    await delay(this.props.delayBetweenAttempts);
+    await delay(props.delayBetweenAttempts);
     newAttempt();
   };
 
@@ -167,13 +167,13 @@ function PinCode (props: IProps) {
   const onPressButtonNumber = async (text: string) => {
     const currentPassword = password + text;
     setPassword(currentPassword)
-    if (this.props.getCurrentLength) this.props.getCurrentLength(currentPassword.length);
-    if (currentPassword.length === this.props.passwordLength) {
-      switch (this.props.status) {
+    if (props.getCurrentLength) props.getCurrentLength(currentPassword.length);
+    if (currentPassword.length === props.passwordLength) {
+      switch (props.status) {
         case PinStatus.choose:
           if (
-            this.props.validationRegex &&
-            this.props.validationRegex.test(currentPassword)
+            props.validationRegex &&
+            props.validationRegex.test(currentPassword)
           ) {
             showErrorFunc(true);
           } else {
@@ -181,14 +181,14 @@ function PinCode (props: IProps) {
           }
           break;
         case PinStatus.confirm:
-          if (currentPassword !== this.props.previousPin) {
+          if (currentPassword !== props.previousPin) {
             showErrorFunc();
           } else {
             endProcess(currentPassword);
           }
           break;
         case PinStatus.enter:
-          this.props.endProcess(currentPassword);
+          props.endProcess(currentPassword);
           await delay(300);
           break;
         default:
@@ -211,7 +211,7 @@ function PinCode (props: IProps) {
       ["0", " "]
   ]);
     const disabled =
-      (password.length === this.props.passwordLength ||
+      (password.length === props.passwordLength ||
         showError) &&
       !attemptFailed;
     return (
@@ -232,10 +232,10 @@ function PinCode (props: IProps) {
             key={text}
             style={[
               styles.buttonCircle,
-              { backgroundColor: this.props.colorCircleButtons },
-              this.props.styleButtonCircle,
+              { backgroundColor: props.colorCircleButtons },
+              props.styleButtonCircle,
             ]}
-            underlayColor={this.props.numbersButtonOverlayColor}
+            underlayColor={props.numbersButtonOverlayColor}
             disabled={disabled}
             onShowUnderlay={() => setTextButtonSelected(text)}
             onHideUnderlay={() => setTextButtonSelected("")}
@@ -249,26 +249,26 @@ function PinCode (props: IProps) {
               key={text}
               style={[
                 styles.text,
-                this.props.styleTextButton,
+                props.styleTextButton,
                 {
                   opacity: opacity,
                   color: textButtonSelected === text
-                    ? this.props.styleColorButtonTitleSelected
-                    : this.props.styleColorButtonTitle
+                    ? props.styleColorButtonTitleSelected
+                    : props.styleColorButtonTitle
                 }
               ]}>
               {text}
             </Text>
-            {((this.props.alphabetCharsVisible) &&
+            {((props.alphabetCharsVisible) &&
               <Text
                 style={[
                   styles.tinytext,
-                  this.props.styleAlphabet,
+                  props.styleAlphabet,
                 {
                   opacity: opacity,
                   color: textButtonSelected === text
-                    ? this.props.styleColorButtonTitleSelected
-                    : this.props.styleColorButtonTitle
+                    ? props.styleColorButtonTitleSelected
+                    : props.styleColorButtonTitle
                 }
                 ]}>
                 {alphanumericMap.get(text)}
@@ -285,14 +285,14 @@ function PinCode (props: IProps) {
     setTimeout(() => {
       this.setState({ changeScreen: true });
       setTimeout(() => {
-        this.props.endProcess(pwd);
+        props.endProcess(pwd);
       }, 500);
     }, 400);
   };
 
   const doShake = async () => {
     const duration = 70;
-    if (this.props.vibrationEnabled) Vibration.vibrate(500, false);
+    if (props.vibrationEnabled) Vibration.vibrate(500, false);
     const length = Dimensions.get("window").width / 3;
     await delay(duration);
     setMoveData({ x: length, y: 0 });
@@ -308,7 +308,7 @@ function PinCode (props: IProps) {
     setMoveData({ x: -length / 4, y: 0 });
     await delay(duration);
     setMoveData({ x: 0, y: 0 });
-    if (this.props.getCurrentLength) this.props.getCurrentLength(0);
+    if (props.getCurrentLength) props.getCurrentLength(0);
   }
 
   const showErrorFunc = async (isErrorValidation = false) => {
@@ -323,18 +323,18 @@ function PinCode (props: IProps) {
     setShowError(false);
     setPassword("");
     await delay(200);
-    this.props.endProcess(password, isErrorValidation);
+    props.endProcess(password, isErrorValidation);
     if (isErrorValidation) setChangeScreen(false);
   }
 
   const renderCirclePassword = () => {
-    const colorPwdErr = this.props.colorPasswordError;
-    const colorPwd = this.props.colorPassword;
-    const colorPwdEmp = this.props.colorPasswordEmpty || colorPwd;
+    const colorPwdErr = props.colorPasswordError;
+    const colorPwd = props.colorPassword;
+    const colorPwdEmp = props.colorPasswordEmpty || colorPwd;
     return (
       <View
-        style={[styles.topViewCirclePassword, this.props.styleCircleHiddenPassword]}>
-        {_.range(this.props.passwordLength).map((val: number) => {
+        style={[styles.topViewCirclePassword, props.styleCircleHiddenPassword]}>
+        {_.range(props.passwordLength).map((val: number) => {
           const lengthSup =
             ((password.length >= val + 1 && !changeScreen) || showError) &&
             !attemptFailed;
@@ -398,8 +398,8 @@ function PinCode (props: IProps) {
                 marginLeft
               }: any) => (
                   <View style={styles.viewCircles}>
-                    {((!this.props.pinCodeVisible ||
-                      (this.props.pinCodeVisible && !lengthSup)) && (
+                    {((!props.pinCodeVisible ||
+                      (props.pinCodeVisible && !lengthSup)) && (
                         <View
                           style={[{
                             left: x,
@@ -410,7 +410,7 @@ function PinCode (props: IProps) {
                             marginLeft: marginLeft,
                             marginRight: marginRight,
                             backgroundColor: color
-                          }, this.props.stylePinCodeCircle]}
+                          }, props.stylePinCodeCircle]}
                         />
                       )) || (
                         <View
@@ -423,8 +423,8 @@ function PinCode (props: IProps) {
                           <Text
                             style={{
                               color: color,
-                              fontFamily: this.props.textPasswordVisibleFamily,
-                              fontSize: this.props.textPasswordVisibleSize
+                              fontFamily: props.textPasswordVisibleFamily,
+                              fontSize: props.textPasswordVisibleSize
                             }}>
                             {password[val]}
                           </Text>
@@ -446,31 +446,31 @@ function PinCode (props: IProps) {
         disabled={password.length === 0}
         underlayColor="transparent"
         onHideUnderlay={() =>
-          setColorDelete(this.props.styleDeleteButtonColorHideUnderlay)
+          setColorDelete(props.styleDeleteButtonColorHideUnderlay)
         }
         onShowUnderlay={() =>
-          setColorDelete(this.props.styleDeleteButtonColorShowUnderlay)
+          setColorDelete(props.styleDeleteButtonColorShowUnderlay)
         }
         onPress={() => {
           if (password.length > 0) {
             const newPass = password.slice(0, -1);
             setPassword(newPass);
-            if (this.props.getCurrentLength)
-              this.props.getCurrentLength(newPass.length);
+            if (props.getCurrentLength)
+              props.getCurrentLength(newPass.length);
           }
         }}
         accessible
-        accessibilityLabel={this.props.buttonDeleteText}>
+        accessibilityLabel={props.buttonDeleteText}>
         <View
-          style={[styles.colIcon, this.props.styleColumnDeleteButton]}>
-          {this.props.customBackSpaceIcon ?
-            this.props.customBackSpaceIcon({ colorDelete: colorDelete, opacity })
+          style={[styles.colIcon, props.styleColumnDeleteButton]}>
+          {props.customBackSpaceIcon ?
+            props.customBackSpaceIcon({ colorDelete: colorDelete, opacity })
             :
             <>
-              {!this.props.iconButtonDeleteDisabled && (
+              {!props.iconButtonDeleteDisabled && (
                 <Icon
-                  name={this.props.styleDeleteButtonIcon}
-                  size={this.props.styleDeleteButtonSize}
+                  name={props.styleDeleteButtonIcon}
+                  size={props.styleDeleteButtonSize}
                   color={colorDelete}
                   style={{ opacity: opacity }}
                 />
@@ -478,10 +478,10 @@ function PinCode (props: IProps) {
               <Text
                 style={[
                   styles.textDeleteButton,
-                  this.props.styleDeleteButtonText,
+                  props.styleDeleteButtonText,
                   { color: colorDelete, opacity: opacity }
                 ]}>
-                {this.props.buttonDeleteText}
+                {props.buttonDeleteText}
               </Text>
             </>
           }
@@ -500,13 +500,13 @@ function PinCode (props: IProps) {
       <Text
         style={[
           styles.textTitle,
-          this.props.styleTextTitle,
+          props.styleTextTitle,
           { color: colorTitle, opacity: opacityTitle }
         ]}>
-        {(attemptFailed && this.props.titleAttemptFailed) ||
-          (showError && this.props.titleConfirmFailed) ||
-          (showError && this.props.titleValidationFailed) ||
-          this.props.sentenceTitle}
+        {(attemptFailed && props.titleAttemptFailed) ||
+          (showError && props.titleConfirmFailed) ||
+          (showError && props.titleValidationFailed) ||
+          props.sentenceTitle}
       </Text>
     );
   };
@@ -521,12 +521,12 @@ function PinCode (props: IProps) {
       <Text
         style={[
           styles.textSubtitle,
-          this.props.styleTextSubtitle,
+          props.styleTextSubtitle,
           { color: colorTitle, opacity: opacityTitle }
         ]}>
         {attemptFailed || showError
-          ? this.props.subtitleError
-          : this.props.subtitle}
+          ? props.subtitleError
+          : props.subtitle}
       </Text>
     );
   };
@@ -535,23 +535,23 @@ function PinCode (props: IProps) {
     <View
       style={[
         styles.container,
-        this.props.styleContainer
+        props.styleContainer
       ]}>
       <Animate
         show={true}
         start={{
           opacity: 0,
-          colorTitle: this.props.styleColorTitle,
-          colorSubtitle: this.props.styleColorSubtitle,
+          colorTitle: props.styleColorTitle,
+          colorSubtitle: props.styleColorSubtitle,
           opacityTitle: 1
         }}
         enter={{
           opacity: [1],
           colorTitle: [
-            this.props.styleColorTitle
+            props.styleColorTitle
           ],
           colorSubtitle: [
-            this.props.styleColorSubtitle
+            props.styleColorSubtitle
           ],
           opacityTitle: [1],
           timing: { duration: 200, ease: easeLinear }
@@ -560,13 +560,13 @@ function PinCode (props: IProps) {
           opacity: [changeScreen ? 0 : 1],
           colorTitle: [
             showError || attemptFailed
-              ? this.props.styleColorTitleError
-              : this.props.styleColorTitle
+              ? props.styleColorTitleError
+              : props.styleColorTitle
           ],
           colorSubtitle: [
             showError || attemptFailed
-              ? this.props.styleColorSubtitleError
-              : this.props.styleColorSubtitle
+              ? props.styleColorSubtitleError
+              : props.styleColorSubtitle
           ],
           opacityTitle: [showError || attemptFailed ? grid.highOpacity : 1],
           timing: { duration: 200, ease: easeLinear }
@@ -575,19 +575,19 @@ function PinCode (props: IProps) {
           <View
             style={[
               styles.viewTitle,
-              this.props.styleViewTitle,
+              props.styleViewTitle,
               { opacity: opacity }
             ]}>
-            {this.props.titleComponent
-              ? this.props.titleComponent()
+            {props.titleComponent
+              ? props.titleComponent()
               : renderTitle(
                 colorTitle,
                 opacityTitle,
                 attemptFailed,
                 showError
               )}
-            {this.props.subtitleComponent
-              ? this.props.subtitleComponent()
+            {props.subtitleComponent
+              ? props.subtitleComponent()
               : renderSubtitle(
                 colorSubtitle,
                 opacityTitle,
@@ -598,15 +598,15 @@ function PinCode (props: IProps) {
         )}
       </Animate>
       <View style={styles.flexCirclePassword}>
-        {this.props.passwordComponent
-          ? this.props.passwordComponent()
+        {props.passwordComponent
+          ? props.passwordComponent()
           : renderCirclePassword()}
       </View>
       <Grid style={styles.grid}>
         <Row
           style={[
             styles.row,
-            this.props.styleRowButtons
+            props.styleRowButtons
           ]}>
           {_.range(1, 4).map((i: number) => {
             return (
@@ -614,10 +614,10 @@ function PinCode (props: IProps) {
                 key={i}
                 style={[
                   styles.colButtonCircle,
-                  this.props.styleColumnButtons
+                  props.styleColumnButtons
                 ]}>
-                {this.props.buttonNumberComponent
-                  ? this.props.buttonNumberComponent(
+                {props.buttonNumberComponent
+                  ? props.buttonNumberComponent(
                     i,
                     onPressButtonNumber
                   )
@@ -629,7 +629,7 @@ function PinCode (props: IProps) {
         <Row
           style={[
             styles.row,
-            this.props.styleRowButtons
+            props.styleRowButtons
           ]}>
           {_.range(4, 7).map((i: number) => {
             return (
@@ -637,10 +637,10 @@ function PinCode (props: IProps) {
                 key={i}
                 style={[
                   styles.colButtonCircle,
-                  this.props.styleColumnButtons
+                  props.styleColumnButtons
                 ]}>
-                {this.props.buttonNumberComponent
-                  ? this.props.buttonNumberComponent(
+                {props.buttonNumberComponent
+                  ? props.buttonNumberComponent(
                     i,
                     onPressButtonNumber
                   )
@@ -652,7 +652,7 @@ function PinCode (props: IProps) {
         <Row
           style={[
             styles.row,
-            this.props.styleRowButtons
+            props.styleRowButtons
           ]}>
           {_.range(7, 10).map((i: number) => {
             return (
@@ -660,10 +660,10 @@ function PinCode (props: IProps) {
                 key={i}
                 style={[
                   styles.colButtonCircle,
-                  this.props.styleColumnButtons
+                  props.styleColumnButtons
                 ]}>
-                {this.props.buttonNumberComponent
-                  ? this.props.buttonNumberComponent(
+                {props.buttonNumberComponent
+                  ? props.buttonNumberComponent(
                     i,
                     onPressButtonNumber
                   )
@@ -676,25 +676,25 @@ function PinCode (props: IProps) {
           style={[
             styles.row,
             styles.rowWithEmpty,
-            this.props.styleRowButtons
+            props.styleRowButtons
           ]}>
           <Col
             style={[
               styles.colEmpty,
-              this.props.styleEmptyColumn
+              props.styleEmptyColumn
             ]}>
-            {this.props.emptyColumnComponent
-              ? this.props.emptyColumnComponent(this.props.launchTouchID)
+            {props.emptyColumnComponent
+              ? props.emptyColumnComponent(props.launchTouchID)
               : null
             }
           </Col>
           <Col
             style={[
               styles.colButtonCircle,
-              this.props.styleColumnButtons
+              props.styleColumnButtons
             ]}>
-            {this.props.buttonNumberComponent
-              ? this.props.buttonNumberComponent(
+            {props.buttonNumberComponent
+              ? props.buttonNumberComponent(
                 "0",
                 onPressButtonNumber
               )
@@ -703,7 +703,7 @@ function PinCode (props: IProps) {
           <Col
             style={[
               styles.colButtonCircle,
-              this.props.styleColumnButtons
+              props.styleColumnButtons
             ]}>
             <Animate
               show={true}
@@ -713,20 +713,20 @@ function PinCode (props: IProps) {
               update={{
                 opacity: [
                   password.length === 0 ||
-                    password.length === this.props.passwordLength
+                    password.length === props.passwordLength
                     ? 0.5
                     : 1
                 ],
                 timing: { duration: 400, ease: easeLinear }
               }}>
               {({ opacity }: any) =>
-                this.props.buttonDeleteComponent
-                  ? this.props.buttonDeleteComponent(() => {
+                props.buttonDeleteComponent
+                  ? props.buttonDeleteComponent(() => {
                     if (password.length > 0) {
                       const newPass = password.slice(0, -1);
                       this.setState({ password: newPass });
-                      if (this.props.getCurrentLength)
-                        this.props.getCurrentLength(newPass.length);
+                      if (props.getCurrentLength)
+                        props.getCurrentLength(newPass.length);
                     }
                   })
                   : renderButtonDelete(opacity)
