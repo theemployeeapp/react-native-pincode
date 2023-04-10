@@ -1,4 +1,4 @@
-import * as React from "react";
+/// <reference types="react" />
 import { StyleProp, TextStyle, ViewStyle } from "react-native";
 /**
  * Pin Code Component
@@ -83,24 +83,5 @@ export declare enum PinStatus {
     confirm = "confirm",
     enter = "enter"
 }
-declare class PinCode extends React.PureComponent<IProps, IState> {
-    static defaultProps: Partial<IProps>;
-    private readonly _circleSizeEmpty;
-    private readonly _circleSizeFull;
-    constructor(props: IProps);
-    componentDidMount(): void;
-    componentDidUpdate(prevProps: Readonly<IProps>): void;
-    failedAttempt: () => Promise<void>;
-    newAttempt: () => Promise<void>;
-    onPressButtonNumber: (text: string) => Promise<void>;
-    renderButtonNumber: (text: string) => JSX.Element;
-    endProcess: (pwd: string) => void;
-    doShake(): Promise<void>;
-    showError(isErrorValidation?: boolean): Promise<void>;
-    renderCirclePassword: () => JSX.Element;
-    renderButtonDelete: (opacity: number) => JSX.Element;
-    renderTitle: (colorTitle: string, opacityTitle: number, attemptFailed?: boolean, showError?: boolean) => JSX.Element;
-    renderSubtitle: (colorTitle: string, opacityTitle: number, attemptFailed?: boolean, showError?: boolean) => JSX.Element;
-    render(): JSX.Element;
-}
+declare function PinCode(props: IProps): JSX.Element;
 export default PinCode;
