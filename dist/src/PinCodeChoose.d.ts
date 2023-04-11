@@ -1,5 +1,5 @@
+/// <reference types="react" />
 import { PinStatus } from './PinCode';
-import * as React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 /**
  * Pin Code Choose PIN Page
@@ -71,12 +71,5 @@ export type IState = {
     status: PinStatus;
     pinCode: string;
 };
-declare class PinCodeChoose extends React.PureComponent<IProps, IState> {
-    static defaultProps: Partial<IProps>;
-    constructor(props: IProps);
-    endProcessCreation: (pinCode: string, isErrorValidation?: boolean) => void;
-    endProcessConfirm: (pinCode: string) => Promise<void>;
-    cancelConfirm: () => void;
-    render(): JSX.Element;
-}
+declare function PinCodeChoose(props: IProps): JSX.Element;
 export default PinCodeChoose;

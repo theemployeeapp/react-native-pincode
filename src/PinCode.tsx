@@ -283,7 +283,7 @@ function PinCode (props: IProps) {
 
   const endProcess = (pwd: string) => {
     setTimeout(() => {
-      this.setState({ changeScreen: true });
+      setChangeScreen(true);
       setTimeout(() => {
         props.endProcess(pwd);
       }, 500);
@@ -621,7 +621,7 @@ function PinCode (props: IProps) {
                     i,
                     onPressButtonNumber
                   )
-                  : this.renderButtonNumber(i.toString())}
+                  : renderButtonNumber(i.toString())}
               </Col>
             );
           })}
@@ -644,7 +644,7 @@ function PinCode (props: IProps) {
                     i,
                     onPressButtonNumber
                   )
-                  : this.renderButtonNumber(i.toString())}
+                  : renderButtonNumber(i.toString())}
               </Col>
             );
           })}
@@ -667,7 +667,7 @@ function PinCode (props: IProps) {
                     i,
                     onPressButtonNumber
                   )
-                  : this.renderButtonNumber(i.toString())}
+                  : renderButtonNumber(i.toString())}
               </Col>
             );
           })}
@@ -698,7 +698,7 @@ function PinCode (props: IProps) {
                 "0",
                 onPressButtonNumber
               )
-              : this.renderButtonNumber("0")}
+              : renderButtonNumber("0")}
           </Col>
           <Col
             style={[
@@ -724,7 +724,7 @@ function PinCode (props: IProps) {
                   ? props.buttonDeleteComponent(() => {
                     if (password.length > 0) {
                       const newPass = password.slice(0, -1);
-                      this.setState({ password: newPass });
+                      setPassword(newPass);
                       if (props.getCurrentLength)
                         props.getCurrentLength(newPass.length);
                     }

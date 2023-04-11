@@ -154,7 +154,7 @@ function PinCode(props) {
     };
     const endProcess = (pwd) => {
         setTimeout(() => {
-            this.setState({ changeScreen: true });
+            setChangeScreen(true);
             setTimeout(() => {
                 props.endProcess(pwd);
             }, 500);
@@ -367,7 +367,7 @@ function PinCode(props) {
                         props.styleColumnButtons
                     ] }, props.buttonNumberComponent
                     ? props.buttonNumberComponent(i, onPressButtonNumber)
-                    : this.renderButtonNumber(i.toString())));
+                    : renderButtonNumber(i.toString())));
             })),
             React.createElement(react_native_easy_grid_1.Row, { style: [
                     styles.row,
@@ -378,7 +378,7 @@ function PinCode(props) {
                         props.styleColumnButtons
                     ] }, props.buttonNumberComponent
                     ? props.buttonNumberComponent(i, onPressButtonNumber)
-                    : this.renderButtonNumber(i.toString())));
+                    : renderButtonNumber(i.toString())));
             })),
             React.createElement(react_native_easy_grid_1.Row, { style: [
                     styles.row,
@@ -389,7 +389,7 @@ function PinCode(props) {
                         props.styleColumnButtons
                     ] }, props.buttonNumberComponent
                     ? props.buttonNumberComponent(i, onPressButtonNumber)
-                    : this.renderButtonNumber(i.toString())));
+                    : renderButtonNumber(i.toString())));
             })),
             React.createElement(react_native_easy_grid_1.Row, { style: [
                     styles.row,
@@ -407,7 +407,7 @@ function PinCode(props) {
                         props.styleColumnButtons
                     ] }, props.buttonNumberComponent
                     ? props.buttonNumberComponent("0", onPressButtonNumber)
-                    : this.renderButtonNumber("0")),
+                    : renderButtonNumber("0")),
                 React.createElement(react_native_easy_grid_1.Col, { style: [
                         styles.colButtonCircle,
                         props.styleColumnButtons
@@ -426,7 +426,7 @@ function PinCode(props) {
                         ? props.buttonDeleteComponent(() => {
                             if (password.length > 0) {
                                 const newPass = password.slice(0, -1);
-                                this.setState({ password: newPass });
+                                setPassword(newPass);
                                 if (props.getCurrentLength)
                                     props.getCurrentLength(newPass.length);
                             }

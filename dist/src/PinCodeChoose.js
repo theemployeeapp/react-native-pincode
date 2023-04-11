@@ -2,52 +2,48 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const PinCode_1 = require("./PinCode");
 const utils_1 = require("./utils");
-const React = require("react");
+const react_1 = require("react");
 const react_native_1 = require("react-native");
 const Keychain = require("react-native-keychain");
-class PinCodeChoose extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        this.endProcessCreation = (pinCode, isErrorValidation) => {
-            this.setState({
-                pinCode: isErrorValidation ? '' : pinCode,
-                status: isErrorValidation ? PinCode_1.PinStatus.choose : PinCode_1.PinStatus.confirm
-            });
-        };
-        this.endProcessConfirm = async (pinCode) => {
-            if (pinCode === this.state.pinCode) {
-                if (this.props.storePin) {
-                    this.props.storePin(pinCode);
-                }
-                else {
-                    await Keychain.setInternetCredentials(this.props.pinCodeKeychainName, this.props.pinCodeKeychainName, pinCode, utils_1.noBiometricsConfig);
-                }
-                if (!!this.props.finishProcess)
-                    this.props.finishProcess(pinCode);
+const React = require("react");
+function PinCodeChoose(props) {
+    const [status, setStatus] = (0, react_1.useState)(PinCode_1.PinStatus.choose);
+    const [pinCode, setPinCode] = (0, react_1.useState)('');
+    const endProcessCreation = (pinCodeVar, isErrorValidation) => {
+        if (isErrorValidation) {
+            setPinCode('');
+            setStatus(PinCode_1.PinStatus.choose);
+        }
+        else {
+            setPinCode(pinCodeVar);
+            setStatus(PinCode_1.PinStatus.confirm);
+        }
+    };
+    const endProcessConfirm = async (pinCodeVar) => {
+        if (pinCodeVar === pinCode) {
+            if (props.storePin) {
+                props.storePin(pinCodeVar);
             }
             else {
-                this.setState({ status: PinCode_1.PinStatus.choose });
+                await Keychain.setInternetCredentials(props.pinCodeKeychainName, props.pinCodeKeychainName, pinCodeVar, utils_1.noBiometricsConfig);
             }
-        };
-        this.cancelConfirm = () => {
-            this.setState({ status: PinCode_1.PinStatus.choose });
-        };
-        this.state = { status: PinCode_1.PinStatus.choose, pinCode: '' };
-        this.endProcessCreation = this.endProcessCreation.bind(this);
-        this.endProcessConfirm = this.endProcessConfirm.bind(this);
-    }
-    render() {
-        return (React.createElement(react_native_1.View, { style: [
-                styles.container,
-                this.props.styleContainer
-            ] },
-            this.state.status === PinCode_1.PinStatus.choose && (React.createElement(PinCode_1.default, { alphabetCharsVisible: this.props.alphabetCharsVisible, buttonDeleteComponent: this.props.buttonDeleteComponent || null, buttonDeleteText: this.props.buttonDeleteText, buttonNumberComponent: this.props.buttonNumberComponent || null, colorCircleButtons: this.props.colorCircleButtons, colorPassword: this.props.colorPassword || undefined, colorPasswordEmpty: this.props.colorPasswordEmpty, colorPasswordError: this.props.colorPasswordError || undefined, customBackSpaceIcon: this.props.customBackSpaceIcon, emptyColumnComponent: this.props.emptyColumnComponent, endProcess: this.endProcessCreation, getCurrentLength: this.props.getCurrentLength, iconButtonDeleteDisabled: this.props.iconButtonDeleteDisabled, numbersButtonOverlayColor: this.props.numbersButtonOverlayColor || undefined, passwordComponent: this.props.passwordComponent || null, passwordLength: this.props.passwordLength || 4, pinCodeVisible: this.props.pinCodeVisible, sentenceTitle: this.props.titleChoose, status: PinCode_1.PinStatus.choose, styleAlphabet: this.props.styleAlphabet, styleButtonCircle: this.props.styleButtonCircle, styleCircleHiddenPassword: this.props.styleCircleHiddenPassword, styleCircleSizeEmpty: this.props.styleCircleSizeEmpty, styleCircleSizeFull: this.props.styleCircleSizeFull, styleColorButtonTitle: this.props.styleColorButtonTitle, styleColorButtonTitleSelected: this.props.styleColorButtonTitleSelected, styleColorSubtitle: this.props.styleColorSubtitle, styleColorSubtitleError: this.props.styleColorSubtitleError, styleColorTitle: this.props.styleColorTitle, styleColorTitleError: this.props.styleColorTitleError, styleColumnButtons: this.props.styleColumnButtons, styleColumnDeleteButton: this.props.styleColumnDeleteButton, styleContainer: this.props.styleContainerPinCode, styleDeleteButtonColorHideUnderlay: this.props.styleDeleteButtonColorHideUnderlay, styleDeleteButtonColorShowUnderlay: this.props.styleDeleteButtonColorShowUnderlay, styleDeleteButtonIcon: this.props.styleDeleteButtonIcon, styleDeleteButtonSize: this.props.styleDeleteButtonSize, styleDeleteButtonText: this.props.styleDeleteButtonText, styleEmptyColumn: this.props.styleEmptyColumn, stylePinCodeCircle: this.props.stylePinCodeCircle, styleRowButtons: this.props.styleRowButtons, styleTextButton: this.props.styleTextButton, styleTextSubtitle: this.props.styleTextSubtitle, styleTextTitle: this.props.styleTextTitle, styleViewTitle: this.props.styleViewTitle, subtitle: this.props.subtitleChoose, subtitleComponent: this.props.subtitleComponent || null, subtitleError: this.props.subtitleError || 'Please try again', textPasswordVisibleFamily: this.props.textPasswordVisibleFamily, textPasswordVisibleSize: this.props.textPasswordVisibleSize, titleComponent: this.props.titleComponent || null, titleValidationFailed: this.props.titleValidationFailed || 'PIN code unsafe', validationRegex: this.props.validationRegex, vibrationEnabled: this.props.vibrationEnabled })),
-            this.state.status === PinCode_1.PinStatus.confirm && (React.createElement(PinCode_1.default, { alphabetCharsVisible: this.props.alphabetCharsVisible, buttonDeleteComponent: this.props.buttonDeleteComponent || null, buttonDeleteText: this.props.buttonDeleteText, buttonNumberComponent: this.props.buttonNumberComponent || null, cancelFunction: this.cancelConfirm, colorCircleButtons: this.props.colorCircleButtons, colorPassword: this.props.colorPassword || undefined, colorPasswordEmpty: this.props.colorPasswordEmpty, colorPasswordError: this.props.colorPasswordError || undefined, customBackSpaceIcon: this.props.customBackSpaceIcon, emptyColumnComponent: this.props.emptyColumnComponent, endProcess: this.endProcessConfirm, getCurrentLength: this.props.getCurrentLength, iconButtonDeleteDisabled: this.props.iconButtonDeleteDisabled, numbersButtonOverlayColor: this.props.numbersButtonOverlayColor || undefined, passwordComponent: this.props.passwordComponent || null, passwordLength: this.props.passwordLength || 4, pinCodeVisible: this.props.pinCodeVisible, previousPin: this.state.pinCode, sentenceTitle: this.props.titleConfirm, status: PinCode_1.PinStatus.confirm, subtitle: this.props.subtitleConfirm, subtitleComponent: this.props.subtitleComponent || null, subtitleError: this.props.subtitleError || 'Please try again', textPasswordVisibleFamily: this.props.textPasswordVisibleFamily, textPasswordVisibleSize: this.props.textPasswordVisibleSize, titleAttemptFailed: this.props.titleAttemptFailed || 'Incorrect PIN Code', titleComponent: this.props.titleComponent || null, titleConfirmFailed: this.props.titleConfirmFailed || 'Your entries did not match', styleAlphabet: this.props.styleAlphabet, styleButtonCircle: this.props.styleButtonCircle, styleCircleHiddenPassword: this.props.styleCircleHiddenPassword, styleCircleSizeEmpty: this.props.styleCircleSizeEmpty, styleCircleSizeFull: this.props.styleCircleSizeFull, styleColorButtonTitle: this.props.styleColorButtonTitle, styleColorButtonTitleSelected: this.props.styleColorButtonTitleSelected, styleColorSubtitle: this.props.styleColorSubtitle, styleColorSubtitleError: this.props.styleColorSubtitleError, styleColorTitle: this.props.styleColorTitle, styleColorTitleError: this.props.styleColorTitleError, styleColumnButtons: this.props.styleColumnButtons, styleColumnDeleteButton: this.props.styleColumnDeleteButton, styleContainer: this.props.styleContainerPinCode, styleDeleteButtonColorHideUnderlay: this.props.styleDeleteButtonColorHideUnderlay, styleDeleteButtonColorShowUnderlay: this.props.styleDeleteButtonColorShowUnderlay, styleDeleteButtonIcon: this.props.styleDeleteButtonIcon, styleDeleteButtonSize: this.props.styleDeleteButtonSize, styleDeleteButtonText: this.props.styleDeleteButtonText, styleEmptyColumn: this.props.styleEmptyColumn, stylePinCodeCircle: this.props.stylePinCodeCircle, styleRowButtons: this.props.styleRowButtons, styleTextButton: this.props.styleTextButton, styleTextSubtitle: this.props.styleTextSubtitle, styleTextTitle: this.props.styleTextTitle, styleViewTitle: this.props.styleViewTitle, vibrationEnabled: this.props.vibrationEnabled, delayBetweenAttempts: this.props.delayBetweenAttempts }))));
-    }
+            if (!!props.finishProcess)
+                props.finishProcess(pinCode);
+        }
+        else {
+            setStatus(PinCode_1.PinStatus.choose);
+        }
+    };
+    const cancelConfirm = () => {
+        setStatus(PinCode_1.PinStatus.choose);
+    };
+    return (React.createElement(react_native_1.View, { key: Math.random(), style: [
+            styles.container,
+            props.styleContainer
+        ] },
+        status === PinCode_1.PinStatus.choose && (React.createElement(PinCode_1.default, { alphabetCharsVisible: props.alphabetCharsVisible, buttonDeleteComponent: props.buttonDeleteComponent || null, buttonDeleteText: props.buttonDeleteText, buttonNumberComponent: props.buttonNumberComponent || null, colorCircleButtons: props.colorCircleButtons, colorPassword: props.colorPassword || undefined, colorPasswordEmpty: props.colorPasswordEmpty, colorPasswordError: props.colorPasswordError || undefined, customBackSpaceIcon: props.customBackSpaceIcon, emptyColumnComponent: props.emptyColumnComponent, endProcess: endProcessCreation, getCurrentLength: props.getCurrentLength, iconButtonDeleteDisabled: props.iconButtonDeleteDisabled, numbersButtonOverlayColor: props.numbersButtonOverlayColor || undefined, passwordComponent: props.passwordComponent || null, passwordLength: props.passwordLength || 4, pinCodeVisible: props.pinCodeVisible, sentenceTitle: props.titleChoose, status: PinCode_1.PinStatus.choose, styleAlphabet: props.styleAlphabet, styleButtonCircle: props.styleButtonCircle, styleCircleHiddenPassword: props.styleCircleHiddenPassword, styleCircleSizeEmpty: props.styleCircleSizeEmpty, styleCircleSizeFull: props.styleCircleSizeFull, styleColorButtonTitle: props.styleColorButtonTitle, styleColorButtonTitleSelected: props.styleColorButtonTitleSelected, styleColorSubtitle: props.styleColorSubtitle, styleColorSubtitleError: props.styleColorSubtitleError, styleColorTitle: props.styleColorTitle, styleColorTitleError: props.styleColorTitleError, styleColumnButtons: props.styleColumnButtons, styleColumnDeleteButton: props.styleColumnDeleteButton, styleContainer: props.styleContainerPinCode, styleDeleteButtonColorHideUnderlay: props.styleDeleteButtonColorHideUnderlay, styleDeleteButtonColorShowUnderlay: props.styleDeleteButtonColorShowUnderlay, styleDeleteButtonIcon: props.styleDeleteButtonIcon, styleDeleteButtonSize: props.styleDeleteButtonSize, styleDeleteButtonText: props.styleDeleteButtonText, styleEmptyColumn: props.styleEmptyColumn, stylePinCodeCircle: props.stylePinCodeCircle, styleRowButtons: props.styleRowButtons, styleTextButton: props.styleTextButton, styleTextSubtitle: props.styleTextSubtitle, styleTextTitle: props.styleTextTitle, styleViewTitle: props.styleViewTitle, subtitle: props.subtitleChoose, subtitleComponent: props.subtitleComponent || null, subtitleError: props.subtitleError || 'Please try again', textPasswordVisibleFamily: props.textPasswordVisibleFamily, textPasswordVisibleSize: props.textPasswordVisibleSize, titleComponent: props.titleComponent || null, titleValidationFailed: props.titleValidationFailed || 'PIN code unsafe', validationRegex: props.validationRegex, vibrationEnabled: props.vibrationEnabled })),
+        status === PinCode_1.PinStatus.confirm && (React.createElement(PinCode_1.default, { alphabetCharsVisible: props.alphabetCharsVisible, buttonDeleteComponent: props.buttonDeleteComponent || null, buttonDeleteText: props.buttonDeleteText, buttonNumberComponent: props.buttonNumberComponent || null, cancelFunction: cancelConfirm, colorCircleButtons: props.colorCircleButtons, colorPassword: props.colorPassword || undefined, colorPasswordEmpty: props.colorPasswordEmpty, colorPasswordError: props.colorPasswordError || undefined, customBackSpaceIcon: props.customBackSpaceIcon, emptyColumnComponent: props.emptyColumnComponent, endProcess: endProcessConfirm, getCurrentLength: props.getCurrentLength, iconButtonDeleteDisabled: props.iconButtonDeleteDisabled, numbersButtonOverlayColor: props.numbersButtonOverlayColor || undefined, passwordComponent: props.passwordComponent || null, passwordLength: props.passwordLength || 4, pinCodeVisible: props.pinCodeVisible, previousPin: pinCode, sentenceTitle: props.titleConfirm, status: PinCode_1.PinStatus.confirm, subtitle: props.subtitleConfirm, subtitleComponent: props.subtitleComponent || null, subtitleError: props.subtitleError || 'Please try again', textPasswordVisibleFamily: props.textPasswordVisibleFamily, textPasswordVisibleSize: props.textPasswordVisibleSize, titleAttemptFailed: props.titleAttemptFailed || 'Incorrect PIN Code', titleComponent: props.titleComponent || null, titleConfirmFailed: props.titleConfirmFailed || 'Your entries did not match', styleAlphabet: props.styleAlphabet, styleButtonCircle: props.styleButtonCircle, styleCircleHiddenPassword: props.styleCircleHiddenPassword, styleCircleSizeEmpty: props.styleCircleSizeEmpty, styleCircleSizeFull: props.styleCircleSizeFull, styleColorButtonTitle: props.styleColorButtonTitle, styleColorButtonTitleSelected: props.styleColorButtonTitleSelected, styleColorSubtitle: props.styleColorSubtitle, styleColorSubtitleError: props.styleColorSubtitleError, styleColorTitle: props.styleColorTitle, styleColorTitleError: props.styleColorTitleError, styleColumnButtons: props.styleColumnButtons, styleColumnDeleteButton: props.styleColumnDeleteButton, styleContainer: props.styleContainerPinCode, styleDeleteButtonColorHideUnderlay: props.styleDeleteButtonColorHideUnderlay, styleDeleteButtonColorShowUnderlay: props.styleDeleteButtonColorShowUnderlay, styleDeleteButtonIcon: props.styleDeleteButtonIcon, styleDeleteButtonSize: props.styleDeleteButtonSize, styleDeleteButtonText: props.styleDeleteButtonText, styleEmptyColumn: props.styleEmptyColumn, stylePinCodeCircle: props.stylePinCodeCircle, styleRowButtons: props.styleRowButtons, styleTextButton: props.styleTextButton, styleTextSubtitle: props.styleTextSubtitle, styleTextTitle: props.styleTextTitle, styleViewTitle: props.styleViewTitle, vibrationEnabled: props.vibrationEnabled, delayBetweenAttempts: props.delayBetweenAttempts }))));
 }
-PinCodeChoose.defaultProps = {
-    styleContainer: null
-};
 const styles = react_native_1.StyleSheet.create({
     container: {
         flex: 1,
