@@ -104,7 +104,7 @@ function PinCodeChoose (props: IProps) {
           noBiometricsConfig
         )
       }
-      if (!!props.finishProcess) props.finishProcess(pinCode);
+      if (!!props.finishProcess) props.finishProcess(pinCodeVar);
     } else {
       setStatus(PinStatus.choose);
     }
