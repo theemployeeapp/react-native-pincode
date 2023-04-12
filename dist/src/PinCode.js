@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PinStatus = void 0;
 const delay_1 = require("./delay");
 const grid_1 = require("./design/grid");
+const usePrevious_1 = require("./usePrevious");
 const d3_ease_1 = require("d3-ease");
 const _ = require("lodash");
 const react_1 = require("react");
@@ -27,19 +28,12 @@ function PinCode(props) {
     const [changeScreen, setChangeScreen] = (0, react_1.useState)(false);
     const [circleSizeEmpty, setCircleSizeEmpty] = (0, react_1.useState)(props.styleCircleSizeEmpty || 4);
     const [circleSizeFull, setCircleSizeFull] = (0, react_1.useState)(props.styleCircleSizeFull || (props.pinCodeVisible ? 6 : 8));
-    function usePrevious(value) {
-        const ref = (0, react_1.useRef)();
-        (0, react_1.useEffect)(() => {
-            ref.current = value;
-        });
-        return ref.current;
-    }
     (0, react_1.useEffect)(() => {
         if (props.getCurrentLength)
             props.getCurrentLength(0);
     }, []);
     (0, react_1.useEffect)(() => {
-        const prevStatus = usePrevious(props.pinCodeStatus);
+        const prevStatus = (0, usePrevious_1.usePrevious)(props.pinCodeStatus);
         if (prevStatus !== "failure" &&
             props.pinCodeStatus === "failure") {
             failedAttempt();

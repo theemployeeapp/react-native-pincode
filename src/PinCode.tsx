@@ -1,7 +1,7 @@
 import delay from "./delay";
 import { colors } from "./design/colors";
 import { grid } from "./design/grid";
-
+import { usePrevious } from "./usePrevious";
 import { easeLinear } from "d3-ease";
 import * as _ from "lodash";
 import { useEffect, useState, useRef } from 'react';
@@ -115,14 +115,6 @@ function PinCode (props: IProps) {
   const [changeScreen, setChangeScreen] = useState(false)
   const [circleSizeEmpty, setCircleSizeEmpty] = useState(props.styleCircleSizeEmpty || 4)
   const [circleSizeFull, setCircleSizeFull] = useState(props.styleCircleSizeFull || (props.pinCodeVisible ? 6 : 8))
-
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  }
 
   useEffect(() => {
     if (props.getCurrentLength) props.getCurrentLength(0);
