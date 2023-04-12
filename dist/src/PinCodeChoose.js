@@ -28,7 +28,7 @@ function PinCodeChoose(props) {
                 await Keychain.setInternetCredentials(props.pinCodeKeychainName, props.pinCodeKeychainName, pinCodeVar, utils_1.noBiometricsConfig);
             }
             if (!!props.finishProcess)
-                props.finishProcess(pinCode);
+                props.finishProcess(pinCodeVar);
         }
         else {
             setStatus(PinCode_1.PinStatus.choose);

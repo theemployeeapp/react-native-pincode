@@ -1,5 +1,5 @@
+/// <reference types="react" />
 import { PinResultStatus } from "./utils";
-import * as React from "react";
 export type IProps = {
     buttonComponent?: any;
     changeStatus: (status: PinResultStatus) => void;
@@ -32,19 +32,5 @@ export type IProps = {
 export type IState = {
     timeDiff: number;
 };
-declare class ApplicationLocked extends React.PureComponent<IProps, IState> {
-    static defaultProps: Partial<IProps>;
-    timeLocked: number;
-    isUnmounted: boolean;
-    constructor(props: IProps);
-    componentDidMount(): void;
-    timer(): Promise<void>;
-    componentWillUnmount(): void;
-    renderButton: () => JSX.Element;
-    renderTimer: (minutes: number, seconds: number) => JSX.Element;
-    renderTitle: () => JSX.Element;
-    renderIcon: () => JSX.Element;
-    renderErrorLocked: () => JSX.Element;
-    render(): JSX.Element;
-}
+declare function ApplicationLocked(props: IProps): JSX.Element;
 export default ApplicationLocked;

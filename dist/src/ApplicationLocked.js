@@ -4,150 +4,128 @@ const colors_1 = require("./design/colors");
 const grid_1 = require("./design/grid");
 const delay_1 = require("./delay");
 const utils_1 = require("./utils");
+const react_1 = require("react");
 const async_storage_1 = require("@react-native-async-storage/async-storage");
 const d3_ease_1 = require("d3-ease");
-const React = require("react");
 const Animate_1 = require("react-move/Animate");
 const react_native_1 = require("react-native");
 const MaterialIcons_1 = require("react-native-vector-icons/MaterialIcons");
-class ApplicationLocked extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        this.renderButton = () => {
-            return (React.createElement(react_native_1.TouchableOpacity, { onPress: () => {
-                    if (this.props.onClickButton) {
-                        this.props.onClickButton();
-                    }
-                    else {
-                        throw "Quit application";
-                    }
-                }, style: [styles.button, this.props.styleButton], accessible: true, accessibilityLabel: this.props.textButton },
-                React.createElement(react_native_1.Text, { style: [
-                        styles.closeButtonText,
-                        this.props.styleTextButton
-                    ] }, this.props.textButton)));
-        };
-        this.renderTimer = (minutes, seconds) => {
-            return (React.createElement(react_native_1.View, { style: [
-                    styles.viewTimer,
-                    this.props.styleViewTimer
-                ] },
-                React.createElement(react_native_1.Text, { style: [
-                        styles.textTimer,
-                        this.props.styleTextTimer
-                    ] }, `${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`)));
-        };
-        this.renderTitle = () => {
-            return (React.createElement(react_native_1.Text, { style: [styles.title, this.props.styleTitle] }, this.props.textTitle || "Maximum attempts reached"));
-        };
-        this.renderIcon = () => {
-            return (React.createElement(react_native_1.View, { style: [styles.viewIcon, this.props.styleViewIcon] }, this.props.lockedIconComponent ?
-                this.props.lockedIconComponent :
-                React.createElement(MaterialIcons_1.default, { name: this.props.nameIcon, size: this.props.sizeIcon, color: this.props.colorIcon })));
-        };
-        this.renderErrorLocked = () => {
-            const minutes = Math.floor(this.state.timeDiff / 1000 / 60);
-            const seconds = Math.floor(this.state.timeDiff / 1000) % 60;
-            return (React.createElement(react_native_1.View, null,
-                React.createElement(Animate_1.default, { show: true, start: {
-                        opacity: 0
-                    }, enter: {
-                        opacity: [1],
-                        timing: { delay: 1000, duration: 1500, ease: d3_ease_1.easeLinear }
-                    } }, (state) => (React.createElement(react_native_1.View, { style: [
-                        styles.viewTextLock,
-                        this.props.styleViewTextLock,
-                        { opacity: state.opacity }
-                    ] },
-                    this.props.titleComponent
-                        ? this.props.titleComponent()
-                        : this.renderTitle(),
-                    this.props.timerComponent
-                        ? this.props.timerComponent()
-                        : this.renderTimer(minutes, seconds),
-                    this.props.iconComponent
-                        ? this.props.iconComponent()
-                        : this.renderIcon(),
-                    React.createElement(react_native_1.Text, { style: [
-                            styles.text,
-                            this.props.styleText
-                        ] }, this.props.textDescription
-                        ? this.props.textDescription
-                        : `To protect your information, access has been locked for ${Math.ceil(this.props.timeToLock / 1000 / 60)} minutes.`),
-                    React.createElement(react_native_1.Text, { style: [
-                            styles.text,
-                            this.props.styleText
-                        ] }, this.props.textSubDescription
-                        ? this.props.textSubDescription
-                        : "Come back later and try again.")))),
-                React.createElement(Animate_1.default, { show: true, start: {
-                        opacity: 0
-                    }, enter: {
-                        opacity: [1],
-                        timing: { delay: 2000, duration: 1500, ease: d3_ease_1.easeLinear }
-                    } }, (state) => (React.createElement(react_native_1.View, { style: { opacity: state.opacity, flex: 1 } },
-                    React.createElement(react_native_1.View, { style: [
-                            styles.viewCloseButton,
-                            this.props.styleViewButton
-                        ] }, this.props.buttonComponent
-                        ? this.props.buttonComponent()
-                        : this.renderButton()))))));
-        };
-        this.state = {
-            timeDiff: 0
-        };
-        this.isUnmounted = false;
-        this.timeLocked = 0;
-        this.timer = this.timer.bind(this);
-        this.renderButton = this.renderButton.bind(this);
-        this.renderTitle = this.renderTitle.bind(this);
-    }
-    componentDidMount() {
-        async_storage_1.default.getItem(this.props.timePinLockedAsyncStorageName).then(val => {
-            this.timeLocked = new Date(val ? val : "").getTime() + this.props.timeToLock;
-            this.timer();
+const React = require("react");
+function ApplicationLocked(props) {
+    const [timeDiff, setTimeDiff] = (0, react_1.useState)(0);
+    const [isUnmounted, setIsUnmounted] = (0, react_1.useState)(false);
+    const [timeLocked, setTimeLocked] = (0, react_1.useState)(0);
+    (0, react_1.useEffect)(() => {
+        async_storage_1.default.getItem(props.timePinLockedAsyncStorageName).then(val => {
+            setTimeLocked(new Date(val ? val : "").getTime() + props.timeToLock);
+            timer();
         });
-    }
-    async timer() {
-        const timeDiff = +new Date(this.timeLocked) - +new Date();
-        this.setState({ timeDiff: Math.max(0, timeDiff) });
+    }, []);
+    const timer = async () => {
+        const timeDiff = +new Date(timeLocked) - +new Date();
+        setTimeDiff(Math.max(0, timeDiff));
         await (0, delay_1.default)(1000);
         if (timeDiff < 1000) {
-            this.props.changeStatus(utils_1.PinResultStatus.initial);
+            props.changeStatus(utils_1.PinResultStatus.initial);
             async_storage_1.default.multiRemove([
-                this.props.timePinLockedAsyncStorageName,
-                this.props.pinAttemptsAsyncStorageName
+                props.timePinLockedAsyncStorageName,
+                props.pinAttemptsAsyncStorageName
             ]);
         }
-        if (!this.isUnmounted) {
-            this.timer();
+        if (!isUnmounted) {
+            timer();
         }
-    }
-    componentWillUnmount() {
-        this.isUnmounted = true;
-    }
-    render() {
+    };
+    (0, react_1.useLayoutEffect)(() => {
+        return () => {
+            setIsUnmounted(true);
+        };
+    }, []);
+    const renderButton = () => {
+        return (React.createElement(react_native_1.TouchableOpacity, { onPress: () => {
+                if (props.onClickButton) {
+                    props.onClickButton();
+                }
+                else {
+                    throw "Quit application";
+                }
+            }, style: [styles.button, props.styleButton], accessible: true, accessibilityLabel: props.textButton },
+            React.createElement(react_native_1.Text, { style: [
+                    styles.closeButtonText,
+                    props.styleTextButton
+                ] }, props.textButton)));
+    };
+    const renderTimer = (minutes, seconds) => {
         return (React.createElement(react_native_1.View, { style: [
-                styles.container,
-                this.props.styleMainContainer
-            ] }, this.renderErrorLocked()));
-    }
+                styles.viewTimer,
+                props.styleViewTimer
+            ] },
+            React.createElement(react_native_1.Text, { style: [
+                    styles.textTimer,
+                    props.styleTextTimer
+                ] }, `${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`)));
+    };
+    const renderTitle = () => {
+        return (React.createElement(react_native_1.Text, { style: [styles.title, props.styleTitle] }, props.textTitle || "Maximum attempts reached"));
+    };
+    const renderIcon = () => {
+        return (React.createElement(react_native_1.View, { style: [styles.viewIcon, props.styleViewIcon] }, props.lockedIconComponent ?
+            props.lockedIconComponent :
+            React.createElement(MaterialIcons_1.default, { name: props.nameIcon, size: props.sizeIcon, color: props.colorIcon })));
+    };
+    const renderErrorLocked = () => {
+        const minutes = Math.floor(timeDiff / 1000 / 60);
+        const seconds = Math.floor(timeDiff / 1000) % 60;
+        return (React.createElement(react_native_1.View, null,
+            React.createElement(Animate_1.default, { show: true, start: {
+                    opacity: 0
+                }, enter: {
+                    opacity: [1],
+                    timing: { delay: 1000, duration: 1500, ease: d3_ease_1.easeLinear }
+                } }, (state) => (React.createElement(react_native_1.View, { style: [
+                    styles.viewTextLock,
+                    props.styleViewTextLock,
+                    { opacity: state.opacity }
+                ] },
+                props.titleComponent
+                    ? props.titleComponent()
+                    : renderTitle(),
+                props.timerComponent
+                    ? props.timerComponent()
+                    : renderTimer(minutes, seconds),
+                props.iconComponent
+                    ? props.iconComponent()
+                    : renderIcon(),
+                React.createElement(react_native_1.Text, { style: [
+                        styles.text,
+                        props.styleText
+                    ] }, props.textDescription
+                    ? props.textDescription
+                    : `To protect your information, access has been locked for ${Math.ceil(props.timeToLock / 1000 / 60)} minutes.`),
+                React.createElement(react_native_1.Text, { style: [
+                        styles.text,
+                        props.styleText
+                    ] }, props.textSubDescription
+                    ? props.textSubDescription
+                    : "Come back later and try again.")))),
+            React.createElement(Animate_1.default, { show: true, start: {
+                    opacity: 0
+                }, enter: {
+                    opacity: [1],
+                    timing: { delay: 2000, duration: 1500, ease: d3_ease_1.easeLinear }
+                } }, (state) => (React.createElement(react_native_1.View, { style: { opacity: state.opacity, flex: 1 } },
+                React.createElement(react_native_1.View, { style: [
+                        styles.viewCloseButton,
+                        props.styleViewButton
+                    ] }, props.buttonComponent
+                    ? props.buttonComponent()
+                    : renderButton()))))));
+    };
+    return (React.createElement(react_native_1.View, { style: [
+            styles.container,
+            props.styleMainContainer
+        ] }, renderErrorLocked()));
 }
-ApplicationLocked.defaultProps = {
-    styleButton: null,
-    styleTextButton: null,
-    styleViewTimer: null,
-    styleTextTimer: null,
-    styleTitle: null,
-    styleViewIcon: null,
-    nameIcon: "lock",
-    sizeIcon: 24,
-    colorIcon: colors_1.colors.white,
-    styleViewTextLock: null,
-    styleText: null,
-    styleViewButton: null,
-    styleMainContainer: null,
-};
 const styles = react_native_1.StyleSheet.create({
     container: {
         position: "absolute",
