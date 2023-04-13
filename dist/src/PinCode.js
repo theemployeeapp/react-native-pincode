@@ -32,8 +32,8 @@ function PinCode(props) {
         if (props.getCurrentLength)
             props.getCurrentLength(0);
     }, []);
+    const prevStatus = (0, usePrevious_1.usePrevious)(props.pinCodeStatus);
     (0, react_1.useEffect)(() => {
-        const prevStatus = (0, usePrevious_1.usePrevious)(props.pinCodeStatus);
         if (prevStatus !== "failure" &&
             props.pinCodeStatus === "failure") {
             failedAttempt();

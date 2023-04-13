@@ -1,7 +1,8 @@
 import delay from './delay'
 import PinCode, { PinStatus } from './PinCode'
 import { PinResultStatus, noBiometricsConfig } from './utils'
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import { usePrevious } from './usePrevious';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import {
   StyleProp,
@@ -104,14 +105,6 @@ function PinCodeEnter (props: IProps) {
   const [locked, setLocked] = useState(false)
   const [keyChainResult, setKeyChainResult] = useState(undefined)
 
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  }
-
   useEffect(() => {
     if (!props.touchIDDisabled) triggerTouchID()
     if (!props.storedPin) {
@@ -126,8 +119,8 @@ function PinCodeEnter (props: IProps) {
     }
   }, [])
 
+  const prevProps: Readonly<IProps> = usePrevious({ pinStatusExternal:  props.pinStatusExternal, touchIDDisabled: props.touchIDDisabled })
   useEffect(() => {
-    const prevProps: Readonly<IProps> = usePrevious({ pinStatusExternal:  props.pinStatusExternal, touchIDDisabled: props.touchIDDisabled })
     if (prevProps && (prevProps.pinStatusExternal !== props.pinStatusExternal)) {
       setPinCodeStatus(props.pinStatusExternal)
     }

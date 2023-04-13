@@ -4,6 +4,7 @@ const delay_1 = require("./delay");
 const PinCode_1 = require("./PinCode");
 const utils_1 = require("./utils");
 const react_1 = require("react");
+const usePrevious_1 = require("./usePrevious");
 const async_storage_1 = require("@react-native-async-storage/async-storage");
 const react_native_1 = require("react-native");
 const Keychain = require("react-native-keychain");
@@ -13,13 +14,6 @@ function PinCodeEnter(props) {
     const [pinCodeStatus, setPinCodeStatus] = (0, react_1.useState)(utils_1.PinResultStatus.initial);
     const [locked, setLocked] = (0, react_1.useState)(false);
     const [keyChainResult, setKeyChainResult] = (0, react_1.useState)(undefined);
-    function usePrevious(value) {
-        const ref = (0, react_1.useRef)();
-        (0, react_1.useEffect)(() => {
-            ref.current = value;
-        });
-        return ref.current;
-    }
     (0, react_1.useEffect)(() => {
         if (!props.touchIDDisabled)
             triggerTouchID();
@@ -31,8 +25,8 @@ function PinCodeEnter(props) {
             });
         }
     }, []);
+    const prevProps = (0, usePrevious_1.usePrevious)({ pinStatusExternal: props.pinStatusExternal, touchIDDisabled: props.touchIDDisabled });
     (0, react_1.useEffect)(() => {
-        const prevProps = usePrevious({ pinStatusExternal: props.pinStatusExternal, touchIDDisabled: props.touchIDDisabled });
         if (prevProps && (prevProps.pinStatusExternal !== props.pinStatusExternal)) {
             setPinCodeStatus(props.pinStatusExternal);
         }

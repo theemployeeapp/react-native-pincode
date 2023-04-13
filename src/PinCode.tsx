@@ -4,7 +4,7 @@ import { grid } from "./design/grid";
 import { usePrevious } from "./usePrevious";
 import { easeLinear } from "d3-ease";
 import * as _ from "lodash";
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Animate from "react-move/Animate";
 import {
   Dimensions,
@@ -120,9 +120,8 @@ function PinCode (props: IProps) {
     if (props.getCurrentLength) props.getCurrentLength(0);
   }, [])
 
+  const prevStatus = usePrevious(props.pinCodeStatus);
   useEffect(() => {
-    const prevStatus = usePrevious(props.pinCodeStatus);
-
     if (
       prevStatus !== "failure" &&
       props.pinCodeStatus === "failure"
