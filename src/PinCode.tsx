@@ -207,7 +207,6 @@ function PinCode (props: IProps) {
       !attemptFailed;
     return (
       <Animate
-        key={Math.random()}
         show={true}
         start={{
           opacity: 1

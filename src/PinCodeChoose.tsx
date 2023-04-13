@@ -105,6 +105,7 @@ function PinCodeChoose (props: IProps) {
         )
       }
       if (!!props.finishProcess) props.finishProcess(pinCodeVar);
+      setStatus(PinStatus.choose);
     } else {
       setStatus(PinStatus.choose);
     }
@@ -116,7 +117,6 @@ function PinCodeChoose (props: IProps) {
 
   return (
     <View
-      key={Math.random()}
       style={[
         styles.container,
         props.styleContainer

@@ -29,6 +29,7 @@ function PinCodeChoose(props) {
             }
             if (!!props.finishProcess)
                 props.finishProcess(pinCodeVar);
+            setStatus(PinCode_1.PinStatus.choose);
         }
         else {
             setStatus(PinCode_1.PinStatus.choose);
@@ -37,7 +38,7 @@ function PinCodeChoose(props) {
     const cancelConfirm = () => {
         setStatus(PinCode_1.PinStatus.choose);
     };
-    return (React.createElement(react_native_1.View, { key: Math.random(), style: [
+    return (React.createElement(react_native_1.View, { style: [
             styles.container,
             props.styleContainer
         ] },

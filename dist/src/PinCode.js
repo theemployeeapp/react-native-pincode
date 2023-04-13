@@ -109,7 +109,7 @@ function PinCode(props) {
         const disabled = (password.length === props.passwordLength ||
             showError) &&
             !attemptFailed;
-        return (React.createElement(Animate_1.default, { key: Math.random(), show: true, start: {
+        return (React.createElement(Animate_1.default, { show: true, start: {
                 opacity: 1
             }, update: {
                 opacity: [
