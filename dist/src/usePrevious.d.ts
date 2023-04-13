@@ -1,1 +1,1 @@
-export declare function usePrevious(value: any): undefined;
+export declare const usePrevious: (value: any) => undefined;

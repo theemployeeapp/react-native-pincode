@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-import React = require("react");
 
-export function usePrevious(value) {
+export const usePrevious = (value) =>  {
   const ref = useRef();
   useEffect(() => {
     ref.current = value;
