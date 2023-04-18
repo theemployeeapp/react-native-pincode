@@ -136,6 +136,12 @@ function PinCode (props: IProps) {
     }
   }, [props.pinCodeStatus])
 
+  useEffect(() => {
+    if (password.length === props.passwordLength) {
+      setPassword("");
+    }
+  })
+
   const failedAttempt = async () => {
     await delay(300);
     setShowError(true);
@@ -185,6 +191,9 @@ function PinCode (props: IProps) {
         default:
           break;
       }
+    }
+    if (password.length === props.passwordLength) {
+      setPassword("");
     }
   };
 
@@ -272,6 +281,7 @@ function PinCode (props: IProps) {
   };
 
   const endProcess = (pwd: string) => {
+    setPassword("");
     setTimeout(() => {
       setChangeScreen(true);
       setTimeout(() => {

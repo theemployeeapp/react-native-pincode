@@ -43,6 +43,11 @@ function PinCode(props) {
             setPassword("");
         }
     }, [props.pinCodeStatus]);
+    (0, react_1.useEffect)(() => {
+        if (password.length === props.passwordLength) {
+            setPassword("");
+        }
+    });
     const failedAttempt = async () => {
         await (0, delay_1.default)(300);
         setShowError(true);
@@ -91,6 +96,9 @@ function PinCode(props) {
                 default:
                     break;
             }
+        }
+        if (password.length === props.passwordLength) {
+            setPassword("");
         }
     };
     const renderButtonNumber = (text) => {
@@ -147,6 +155,7 @@ function PinCode(props) {
                         ] }, alphanumericMap.get(text))))))));
     };
     const endProcess = (pwd) => {
+        setPassword("");
         setTimeout(() => {
             setChangeScreen(true);
             setTimeout(() => {
